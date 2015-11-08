@@ -1,0 +1,1246 @@
+<?xml version="1.0"?>
+<cd:ProductClass name="ENVISAT_MIPAS" last-modified="2013-08-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>ENVISAT MIPAS products</cd:Description>
+  <cd:ProductType name="MIP_NL__0P">
+    <cd:Description>MIPAS Nominal Level 0</cd:Description>
+    <cd:ProductDefinition id="MIP_NL__0P" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__0P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_06_3C </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_RW__0P">
+    <cd:Description>MIPAS Raw Data and SPE Self Test Mode Level 0</cd:Description>
+    <cd:ProductDefinition id="MIP_RW__0P" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_RW__0P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_06_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_RW__0P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009 3-C  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_LS__0P">
+    <cd:Description>MIPAS Line of Sight Level 0</cd:Description>
+    <cd:ProductDefinition id="MIP_LS__0P" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_LS__0P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_06_3C </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_NL__1P">
+    <cd:Description>Geolocated and Calibrated Spectra</cd:Description>
+    <cd:ProductDefinition id="MIP_NL__1P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_06_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">UNDEFINED              </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NL__1P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NL__1P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_NL__2P">
+    <cd:Description>MIPAS Temperature, Pressure, and Atmospheric Constituents Profiles</cd:Description>
+    <cd:ProductDefinition id="MIP_NL__2P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NL__2P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NL__2P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NL__2P_v3" format="binary" version="3">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NL__2P_v4" format="binary" version="4">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_NLE_2P">
+    <cd:Description>MIPAS Temperature, Pressure, and Atmospheric Constituents Profiles for Meteo Users</cd:Description>
+    <cd:ProductDefinition id="MIP_NLE_2P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NLE_2P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NLE_2P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NLE_2P_v3" format="binary" version="3">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NLE_2P_v4" format="binary" version="4">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NLE_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_CG1_AX">
+    <cd:Description>Gain Calibration</cd:Description>
+    <cd:ProductDefinition id="MIP_CG1_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CG1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_CL1_AX">
+    <cd:Description>Line-of-Sight (LOS) Calibration</cd:Description>
+    <cd:ProductDefinition id="MIP_CL1_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CL1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_CS1_AX">
+    <cd:Description>Instrument Line Shape (ILS) and Spectral Calibration</cd:Description>
+    <cd:ProductDefinition id="MIP_CS1_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4-C  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_CS1_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_CO1_AX">
+    <cd:Description>Offset Validation</cd:Description>
+    <cd:ProductDefinition id="MIP_CO1_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_CO1_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CO1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_CA1_AX">
+    <cd:Description>Instrument Characterization Data</cd:Description>
+    <cd:ProductDefinition id="MIP_CA1_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_CA1_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_PS1_AX">
+    <cd:Description>Level 1b Processing Parameters</cd:Description>
+    <cd:ProductDefinition id="MIP_PS1_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_PS1_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_MW1_AX">
+    <cd:Description>Level 1b Microwindow Dictionary</cd:Description>
+    <cd:ProductDefinition id="MIP_MW1_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_4_3C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_PS2_AX">
+    <cd:Description>Level 2 Processing Parameters</cd:Description>
+    <cd:ProductDefinition id="MIP_PS2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_PS2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_PS2_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_PS2_AX_v3" format="binary" version="3">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_PS2_AX_v4" format="binary" version="4">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_PS2_AX_v5" format="binary" version="5">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_MW2_AX">
+    <cd:Description>Level 2 Microwindow Data</cd:Description>
+    <cd:ProductDefinition id="MIP_MW2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_MW2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_MW2_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_MW2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_SP2_AX">
+    <cd:Description>Spectroscopic Data</cd:Description>
+    <cd:ProductDefinition id="MIP_SP2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_SP2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_SP2_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_SP2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_IG2_AX">
+    <cd:Description>Initial Guess Profile Data</cd:Description>
+    <cd:ProductDefinition id="MIP_IG2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_IG2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_IG2_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_IG2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_FM2_AX">
+    <cd:Description>Forward Calculation Results</cd:Description>
+    <cd:ProductDefinition id="MIP_FM2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_FM2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_FM2_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_FM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_OM2_AX">
+    <cd:Description>Microwindow Occupation Matrixes</cd:Description>
+    <cd:ProductDefinition id="MIP_OM2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_OM2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_OM2_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_OM2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_CS2_AX">
+    <cd:Description>Cross Sections Lookup Table</cd:Description>
+    <cd:ProductDefinition id="MIP_CS2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_CS2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_CS2_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CS2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MIP_PI2_AX">
+    <cd:Description>A-Priori Pointing Information</cd:Description>
+    <cd:ProductDefinition id="MIP_PI2_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3H </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_3I </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_12_4C </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_4/C  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3B   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_3C   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_4    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_5E   </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ESA-GS-0177_6    </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/A  </cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_PI2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CS2_AX_GADS_general_v0" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="npt">
+    <cd:Integer>
+      <cd:Description>Number of p,T microwindows</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nvmr">
+    <cd:Array>
+      <cd:Description>Number of species VMR microwindows</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ngas">
+    <cd:Integer>
+      <cd:Description>Number of absorbers for which lookup tables are included</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hitran_code">
+    <cd:Array>
+      <cd:Description>HITRAN codes of included absorbers</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngas)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="hitran_code_trailer">
+    <cd:Integer>
+      <cd:Description>Zero (0) entry</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

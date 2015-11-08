@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CS2_AX_MDSR_mw" last-modified="2013-08-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hitran_code">
+    <cd:Integer>
+      <cd:Description>HITRAN code of gas</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tab_code">
+    <cd:Integer>
+      <cd:Description>Tabulation code</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nbv">
+    <cd:Integer>
+      <cd:Description>Number of base vectors</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="np">
+    <cd:Integer>
+      <cd:Description>Number of -ln(pressure) tabulation points</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="low_press">
+    <cd:Float>
+      <cd:Description>Lowest -ln(pressure) point</cd:Description>
+      <cd:Unit>hPa</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="space_press">
+    <cd:Float>
+      <cd:Description>Spacing of -ln(pressure) tabulation</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nt">
+    <cd:Integer>
+      <cd:Description>Number of temperature tabulation points</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="low_temp">
+    <cd:Float>
+      <cd:Description>Lowest temperature point</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="space_temp">
+    <cd:Float>
+      <cd:Description>Spacing of temperature tabulation</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nwn">
+    <cd:Integer>
+      <cd:Description>Number of wavenumber points</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wvn_first">
+    <cd:Float>
+      <cd:Description>wavenumber of first point</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="space_wvn">
+    <cd:Float>
+      <cd:Description>Spacing between wavenumber points</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="u_matrix">
+    <cd:Array>
+      <cd:Description>U-Matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(../nwn)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../nbv)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="k_matrices">
+    <cd:Array>
+      <cd:Description>K-Matrices</cd:Description>
+      <cd:Dimension><![CDATA[int(../nbv)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../nt)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../np)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>cm2/molec</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

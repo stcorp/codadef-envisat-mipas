@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_OM2_AX_ADSR_prior" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>DSR length</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_occ_matrices">
+    <cd:Integer>
+      <cd:Description>Number of occupation matrices with N[sw](1) rows valid for latitude #1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="labs_occ_matrices">
+    <cd:Array format="ascii">
+      <cd:Description>Labels of occupation matrices with N[sw](1) rows valid for latitude #1</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_occ_matrices)]]></cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>10</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dsr_offsets_ads8">
+    <cd:Array>
+      <cd:Description>Offsets of DRSs within occupation matrix ADS containing annotation data for above occupation matrices</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_occ_matrices)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

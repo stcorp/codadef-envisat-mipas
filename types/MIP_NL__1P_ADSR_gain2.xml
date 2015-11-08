@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__1P_ADSR_gain2" last-modified="2010-06-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time (MJD)(this time corresponds to the ZPD crossing time of the first sweep of the scan for which the data is valid or used)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADSR)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="create_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted, 1 = corrupted due to the instrument, 2 = corrupted due to the transmission and 4 = corrupted due to the observational validation, -1 = empty</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_statistics">
+    <cd:Array>
+      <cd:Description>Number cumulated in statistics, one value per band (A, AB, B, C, D)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sweep_dir">
+    <cd:Text format="ascii">
+      <cd:Description>Sweep direction, 'F' = forward and 'R' = reverse</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>272</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="band_info">
+    <cd:Array>
+      <cd:Description>information for bands A, AB, B, C, D</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="num_points">
+          <cd:Integer>
+            <cd:Description>Number of points in band</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="wavenumber_first">
+          <cd:Float>
+            <cd:Description>Wavenumber of first point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="wavenumber_last">
+          <cd:Float>
+            <cd:Description>Wavenumber of last point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mean">
+          <cd:Array>
+            <cd:Description>Mean data points</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="std_dev">
+          <cd:Array>
+            <cd:Description>Standard deviation data points</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

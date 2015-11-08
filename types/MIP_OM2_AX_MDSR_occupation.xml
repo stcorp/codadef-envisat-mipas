@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_OM2_AX_MDSR_occupation" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>DSR length</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="occ_label">
+    <cd:Text format="ascii">
+      <cd:Description>Label for occupation matrix</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="num_sweeps">
+    <cd:Integer>
+      <cd:Description>Number of sweeps (rows of occupation matrix)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_mw">
+    <cd:Integer>
+      <cd:Description>Number of microwindows (columns of occupation matrix)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="labs_mw">
+    <cd:Array format="ascii">
+      <cd:Description>Labels of microwindows</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_mw)]]></cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>8</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="occ">
+    <cd:Array>
+      <cd:Description>occupation matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_mw)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../num_sweeps)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_MDSR_vmr3_v2" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of DSR. ZPD time of sweep closest to scans mean time.</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (set to -1 if all retrieval failed. Set to 0 otherwise.)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="conv_id">
+    <cd:Integer>
+      <cd:Description>ID of convergence condition terminating the iteration: 0=convergence reached; 1=maximum number of micro-iterations exceeded; 2=maximum number of macro-iterations exceeded; 3=maximum run-time exceeded; 4=retrieval failed</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_chi2">
+    <cd:Float>
+      <cd:Description>Last Chi^2 test value</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ig_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating source of used initial guess data: bitfield: 0x01=MIP_IG2_AX data file used; 0x02=ECMWF data file used; 0x04=optimum estimate used; 0x08=retrieved p,T data used; 0x10=MIP_FM2_AX data used; 0x20=Recursive loop for p,T retrieval and first VMR retrieval (usually H2O) entered (this bit is only reported for p,T retrieval)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vmr">
+    <cd:Array>
+      <cd:Description>VMR of i'th LOS tangent altitude.</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>ppmv</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="vmr_var_cov">
+    <cd:Array>
+      <cd:Description>VMR profile variance / covariance data. Elements of diagonal and off-diagonal elements of variance/covariance matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2]) * (int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2]) + 1) / 2]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>ppmv2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="conc_alt">
+    <cd:Array>
+      <cd:Description>Concentration of i'th LOS tangent altitude</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm3</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="conc_var_cov">
+    <cd:Array>
+      <cd:Description>Concentration profile variance / covariance data. Elements of diagonal and off-diagonal elements of variance/covariance matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2]) * (int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2]) + 1) / 2]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm6</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="vert_col">
+    <cd:Array>
+      <cd:Description>Vertical column density of i'th LOS tangent altitude</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="vert_col_var_cov">
+    <cd:Array>
+      <cd:Description>Vertical column density profile variance / covariance data. Elements of diagonal and off-diagonal elements of variance /covariance matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2]) * (int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2]) + 1) / 2]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm4</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="error_p_t_prop_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating used approach for p,T error propagation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="error_p_t_vcm">
+    <cd:Array>
+      <cd:Description>p,T error VCM</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2])]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="base_alt">
+    <cd:Array>
+      <cd:Description>Altitude grid for VMR base profiles</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_base_vmr_pts[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="base_vmr">
+    <cd:Array>
+      <cd:Description>VMR profile consisting of retrieved VMR and assumed values above and below (= base profile)</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_base_vmr_pts[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>ppmv</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="avg_kernel">
+    <cd:Array>
+      <cd:Description>Averaging kernel matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2])]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$vmr3_structure_index[index(:/..)]]/num_vmr_pts[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cond_param">
+    <cd:Float>
+      <cd:Description>conditioning parameter</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

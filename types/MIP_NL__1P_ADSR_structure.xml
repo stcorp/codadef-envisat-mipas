@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__1P_ADSR_structure" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of first scan info ADSR this record refers to</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to 0)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="appl_proc_id">
+    <cd:Integer>
+      <cd:Description>Application process ID (c.f. field 4 in scan information ADSR)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dsr_len_scan_info">
+    <cd:Integer>
+      <cd:Description>DSR Length of scan information ADSR(s) to which this record refers</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_sweeps_curr_scan">
+    <cd:Integer>
+      <cd:Description>Number of sweeps in current scan (c.f. field 8 in scan information ADSR)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_points_nesr">
+    <cd:Integer>
+      <cd:Description>Number of points in NESR (c.f. field 22 in SPH)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_peaks_fitted">
+    <cd:Integer>
+      <cd:Description>Number of peaks fitted (c.f. field 12.6 in scan information ADSR)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="size_blocks_peaks_fitted">
+    <cd:Integer>
+      <cd:Description>Size of blocks reporting of peaks fitted. Size of field 27 of Scan info ADS</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="index_first_scan_info">
+    <cd:Integer>
+      <cd:Description>Index of first Scan Info ADSR to which Structure ADSR pertains</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_scan_info_adsr">
+    <cd:Integer>
+      <cd:Description>Number of Scan Info ADSR to which Structure ADSR applies</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="index_first_mdsr">
+    <cd:Integer>
+      <cd:Description>Index of first MDSR to which Structure ADSR pertains</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>72</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_PI2_AX_MDSR" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>DSR length</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="matrix_dimension">
+    <cd:Integer>
+      <cd:Description>Dimension of current matrix</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vcm_matrix">
+    <cd:Array>
+      <cd:Description>VCM matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(../matrix_dimension)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../matrix_dimension)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

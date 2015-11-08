@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_MDSR_info_v2" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of DSR. ZPD time of sweep closest to scans mean time, s.</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>DSR length</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD).</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="zpd_crossing_time">
+    <cd:Array>
+      <cd:Description>ZPD crossing time of scene spectrum in elevation scan</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Time timeformat="binary_envisat_datetime">
+      </cd:Time>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="geolocation_los_tangent">
+    <cd:Array>
+      <cd:Description>Geolocation of scene LOS tangent point</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="latitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_north</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_north</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="longitude">
+          <cd:Integer>
+            <cd:Unit>1e-6 degrees_east</cd:Unit>
+            <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+              <cd:Unit>degrees_east</cd:Unit>
+            </cd:Conversion>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tangent_altitude_los">
+    <cd:Array>
+      <cd:Description>Tangent altitude of scene LOS tangent point</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="appl_process_id">
+    <cd:Integer>
+      <cd:Description>Application process ID</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrieval_p_t_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating successful p,T retrieval</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="retrieval_vmr_flag">
+    <cd:Array>
+      <cd:Description>Flag indicating successful VMR retrievals</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="marq_p_t_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating if Marquardt limit is exceeded for pT retrieval</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="marq_vmr_flag">
+    <cd:Array>
+      <cd:Description>Flag indicating if Marquardt limit is exceeded for VMR retrieval</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="chi2_p_t_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating if chi-square limit is exceeded for pT retrieval</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="chi2_vmr_flag">
+    <cd:Array>
+      <cd:Description>Flag indicating if chi-square limit is exceeded for VMR retrieval</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize><![CDATA[8 * if($species_count == 2, 52, 40)]]></cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="retrieval_p_t">
+    <cd:Record>
+      <cd:Description>p, T retrievals.</cd:Description>
+      <cd:Field name="lrv_p_t_flag">
+        <cd:Array>
+          <cd:Description>Logical retrieval vector for p,T retrieval. Set to zero if N/A.</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="pressure">
+        <cd:Array>
+          <cd:Description>Retrieved pressure for each sweep. Set to NaN if N/A</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>hPa</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="pressure_variance">
+        <cd:Array>
+          <cd:Description>Pressure variance for each sweep. Set to NaN if N/A</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>hPa2</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="tangent_altitude">
+        <cd:Array>
+          <cd:Description>Corrected tangent altitudes of sweeps. Set to NaN if N/A</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>km</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="height_cor_variance">
+        <cd:Array>
+          <cd:Description>Height correction variance for each sweep. Set to NaN if N/A</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>m2</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="temp">
+        <cd:Array>
+          <cd:Description>Retrieved temperatures for each sweep. Set to NaN if N/A</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>K</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="temp_variance">
+        <cd:Array>
+          <cd:Description>Temperature variance for each sweep. Set to NaN if N/A</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>K2</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ecmwf_corr_altitude">
+        <cd:Array>
+          <cd:Description>ECMWF corrected altitudes. Set to NaN if N/A</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>km</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="retrieval_vmr">
+    <cd:Array>
+      <cd:Description>VMR retrievals for species.</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="lrv_vmr_flag">
+          <cd:Array>
+            <cd:Description>Logical retrieval vector for VMR retrieval. Set to zero if N/A.</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="vmr">
+          <cd:Array>
+            <cd:Description>Retrieved VMR for each sweep. Set to NaN if N/A</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>ppmv</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="vmr_variance">
+          <cd:Array>
+            <cd:Description>VMR variance for each sweep. Set to NaN if N/A</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>ppmv2</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="concentration">
+          <cd:Array>
+            <cd:Description>Concentration for each sweep. Set to NaN if N/A</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>1/cm3</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="concentration_variance">
+          <cd:Array>
+            <cd:Description>Concentration variance for each sweep. Set to NaN if N/A</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>1/cm6</cd:Unit>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="vertical_col_density">
+          <cd:Array>
+            <cd:Description>Vertical column density for each sweep. Set to NaN if N/A</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>1/cm2</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="vcd_variance">
+          <cd:Array>
+            <cd:Description>Vertical column density variance for each sweep. Set to NaN if N/A</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>1/cm4</cd:Unit>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cloud_det_mw_label">
+    <cd:Array format="ascii">
+      <cd:Description>Labels of first 3 cloud detection meso windows per sweep</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>8</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cloud_index">
+    <cd:Array>
+      <cd:Description>Cloud indexes for sweeps, 3 per sweep</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cloud_index_threshold">
+    <cd:Array>
+      <cd:Description>Cloud index thresholds for sweeps, 3 per sweep</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cloud_detect_flag">
+    <cd:Array>
+      <cd:Description>Flags indicating detection of clouds, 3 per sweep</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$info_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

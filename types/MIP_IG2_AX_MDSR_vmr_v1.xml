@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_IG2_AX_MDSR_vmr_v1" last-modified="2011-03-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (always set to zero)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="day_night_flag">
+    <cd:Array>
+      <cd:Description>Day/Night flag</cd:Description>
+      <cd:Dimension><![CDATA[int(/initial_guess_general_data[0]/num_gas)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prof_day">
+    <cd:Array>
+      <cd:Description>Profiles for day</cd:Description>
+      <cd:Dimension><![CDATA[int(/initial_guess_general_data[0]/num_gas)]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(/initial_guess_general_data[0]/num_elem)]]></cd:Dimension>
+        <cd:Float>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prof_night">
+    <cd:Array>
+      <cd:Description>Profiles for night</cd:Description>
+      <cd:Dimension><![CDATA[int(/initial_guess_general_data[0]/num_gas)]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(/initial_guess_general_data[0]/num_elem)]]></cd:Dimension>
+        <cd:Float>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<cd:Record format="ascii" name="MIP_NL__2P_SPH_v2" last-modified="2013-08-02" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="sph_descriptor_title">
+    <cd:Text>
+      <cd:Description>SPH_DESCRIPTOR=</cd:Description>
+      <cd:FixedValue>SPH_DESCRIPTOR=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sph_descriptor">
+    <cd:Text>
+      <cd:Description>SPH descriptor. ASCII string describing the product.</cd:Description>
+      <cd:ByteSize>28</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_1">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="strip_cont_ind_title">
+    <cd:Text>
+      <cd:Description>STRIPLINE_CONTINUITY_INDICATOR=</cd:Description>
+      <cd:FixedValue>STRIPLINE_CONTINUITY_INDICATOR=</cd:FixedValue>
+      <cd:ByteSize>31</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stripline_continuity_indicator">
+    <cd:Integer>
+      <cd:Description>Value: +000 = no stripline continuity, the product is a complete segment. Other: Stripline Counter</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_2">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="slice_pos_title">
+    <cd:Text>
+      <cd:Description>SLICE_POSITION=</cd:Description>
+      <cd:FixedValue>SLICE_POSITION=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="slice_position">
+    <cd:Integer>
+      <cd:Description>Value: +001 to NUM_SLICES. Default value if no stripline continuity = +001</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_3">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_slice_title">
+    <cd:Text>
+      <cd:Description>NUM_SLICES=</cd:Description>
+      <cd:FixedValue>NUM_SLICES=</cd:FixedValue>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_slices">
+    <cd:Integer>
+      <cd:Description>Number of slices in this stripline. Default value if no continuity = +001</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_4">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_time_title">
+    <cd:Text>
+      <cd:Description>START_TIME=</cd:Description>
+      <cd:FixedValue>START_TIME=</cd:FixedValue>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_3">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="start_time">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>ZPD time of first MDSR of the first scan in the product</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quote_4">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_5">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_time_title">
+    <cd:Text>
+      <cd:Description>STOP_TIME=</cd:Description>
+      <cd:FixedValue>STOP_TIME=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quote_5">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="stop_time">
+    <cd:Time timeformat="ascii_envisat_datetime">
+      <cd:Description>ZPD time of last MDSR of the last scan in the product</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quote_6">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_6">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_lat_title">
+    <cd:Text>
+      <cd:Description>FIRST_TANGENT_LAT=</cd:Description>
+      <cd:FixedValue>FIRST_TANGENT_LAT=</cd:FixedValue>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_tangent_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of LOS tangent point at center of scan (refraction corrected) of the first scan in the product. Positive north.</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_7">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_long_title">
+    <cd:Text>
+      <cd:Description>FIRST_TANGENT_LONG=</cd:Description>
+      <cd:FixedValue>FIRST_TANGENT_LONG=</cd:FixedValue>
+      <cd:ByteSize>19</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="first_tangent_long">
+    <cd:Integer>
+      <cd:Description>Longitude of LOS tangent point at center of scan (refraction corrected) of the first scan in the product. Positive north.</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_8">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_lat_title">
+    <cd:Text>
+      <cd:Description>LAST_TANGENT_LAT=</cd:Description>
+      <cd:FixedValue>LAST_TANGENT_LAT=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_tangent_lat">
+    <cd:Integer>
+      <cd:Description>Latitude of LOS tangent point at center of scan (refraction corrected) of the last scan in the product. Positive East.</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_lat_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degN\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_9">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_long_title">
+    <cd:Text>
+      <cd:Description>LAST_TANGENT_LONG=</cd:Description>
+      <cd:FixedValue>LAST_TANGENT_LONG=</cd:FixedValue>
+      <cd:ByteSize>18</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="last_tangent_long">
+    <cd:Integer>
+      <cd:Description>Longitude of LOS tangent point at center of scan (refraction corrected) of the last scan in the product. Positive East.</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_long_units">
+    <cd:Text>
+      <cd:FixedValue>\07410-6degE\076</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_10">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>48</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_11">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_scans_title">
+    <cd:Text>
+      <cd:Description>NUM_SCANS=</cd:Description>
+      <cd:FixedValue>NUM_SCANS=</cd:FixedValue>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_scans">
+    <cd:Integer>
+      <cd:Description>Number of acquired elevation scans in Level 1 B input file</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_12">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_los_title">
+    <cd:Text>
+      <cd:Description>NUM_LOS_GEOMS=</cd:Description>
+      <cd:FixedValue>NUM_LOS_GEOMS=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_los_geoms">
+    <cd:Integer>
+      <cd:Description>Number of LOS geometries per elev. scan in nominal mode</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_13">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_scans_ds_title">
+    <cd:Text>
+      <cd:Description>NUM_SCANS_PER_DS=</cd:Description>
+      <cd:FixedValue>NUM_SCANS_PER_DS=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_scans_per_ds">
+    <cd:Integer>
+      <cd:Description>Number of elevation scans per D.S. calibration cycle in nominal mode</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_14">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_scans_proc_title">
+    <cd:Text>
+      <cd:Description>NUM_SCANS_PROC=</cd:Description>
+      <cd:FixedValue>NUM_SCANS_PROC=</cd:FixedValue>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_scans_proc">
+    <cd:Integer>
+      <cd:Description>Number of elevation scans in nominal mode processed</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_15">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_sp_not_title">
+    <cd:Text>
+      <cd:Description>NUM_SP_NOT_PROC=</cd:Description>
+      <cd:FixedValue>NUM_SP_NOT_PROC=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_sp_not_proc">
+    <cd:Integer>
+      <cd:Description>Number of elevation scans in special events mode not processed</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_16">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_spec_title">
+    <cd:Text>
+      <cd:Description>NUM_SPECTRA=</cd:Description>
+      <cd:FixedValue>NUM_SPECTRA=</cd:FixedValue>
+      <cd:ByteSize>12</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_spectra">
+    <cd:Integer>
+      <cd:Description>Number of scene spectra in measurement interval</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_17">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_spec_proc_title">
+    <cd:Text>
+      <cd:Description>NUM_SPECTR_PROC=</cd:Description>
+      <cd:FixedValue>NUM_SPECTR_PROC=</cd:FixedValue>
+      <cd:ByteSize>16</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_spectr_proc">
+    <cd:Integer>
+      <cd:Description>Number of scene spectra processed</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_18">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_gain_title">
+    <cd:Text>
+      <cd:Description>NUM_GAIN_CAL=</cd:Description>
+      <cd:FixedValue>NUM_GAIN_CAL=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_gain_cal">
+    <cd:Integer>
+      <cd:Description>Number of gain calibration cycles in measurement time interval. This value will be 0 if no Gain Calibration ADSRs appeared in the input Level-1B product and 1 otherwise</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_19">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="tot_gran_title">
+    <cd:Text>
+      <cd:Description>TOT_GRANULES=</cd:Description>
+      <cd:FixedValue>TOT_GRANULES=</cd:FixedValue>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="tot_granules">
+    <cd:Integer>
+      <cd:Description>Total number of elevation scans (granules) processed</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_20">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_path_diff_title">
+    <cd:Text>
+      <cd:Description>MAX_PATH_DIFF=</cd:Description>
+      <cd:FixedValue>MAX_PATH_DIFF=</cd:FixedValue>
+      <cd:ByteSize>14</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_path_diff">
+    <cd:Float>
+      <cd:Description>Maximum path difference in nominal scene measurements</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:ByteSize>15</cd:ByteSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_path_diff_units">
+    <cd:Text>
+      <cd:FixedValue>\074cm\076</cd:FixedValue>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_21">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="order_title">
+    <cd:Text>
+      <cd:Description>ORDER_OF_SPECIES=</cd:Description>
+      <cd:FixedValue>ORDER_OF_SPECIES=</cd:FixedValue>
+      <cd:ByteSize>17</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="order_quote_1">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="order_of_species">
+    <cd:Text>
+      <cd:Description>String describing the sequence of species within this product. Example: 'H2O,N2O,HNO3,CH4,O3,NO2,F11,ClNO,N2O5,F12'. Unused characters set to blank. String is left justified.</cd:Description>
+      <cd:ByteSize>149</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="order_quote_2">
+    <cd:Text>
+      <cd:Description>quotation mark</cd:Description>
+      <cd:FixedValue>"</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="order_newline_char">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_sweeps_per_scan_title">
+    <cd:Text>
+      <cd:Description>NUM_SWEEPS_PER_SCAN=</cd:Description>
+      <cd:FixedValue>NUM_SWEEPS_PER_SCAN=</cd:FixedValue>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_sweeps_per_scan">
+    <cd:Integer>
+      <cd:Description>Number of sweeps per nominal elevation scan</cd:Description>
+      <cd:ByteSize>6</cd:ByteSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="newline_char_21a">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Text>
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>20</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="newline_char_22">
+    <cd:Text>
+      <cd:Description>newline</cd:Description>
+      <cd:FixedValue>\n</cd:FixedValue>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>char</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

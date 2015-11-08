@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CO1_AX_MDSR2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="zpd_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ZPD time of  first deep space sweep used to generate current offset validation data.</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted, -1 = corrupted, default values filled in</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_cumulated">
+    <cd:Array>
+      <cd:Description>Number cumulated in statistics</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sweep_dir">
+    <cd:Text format="ascii">
+      <cd:Description>Sweep direction, 'F' = forward and 'R' = reverse</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>272</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="band">
+    <cd:Array>
+      <cd:Description>info for bands A, AB, B, C, D</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="num_points">
+          <cd:Integer>
+            <cd:Description>Number of points in band</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="first_wavenum">
+          <cd:Float>
+            <cd:Description>Wavenumber of first point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="last_wavenum">
+          <cd:Float>
+            <cd:Description>Wavenumber of last point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="mean">
+          <cd:Array>
+            <cd:Description>Mean data points</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="std_dev">
+          <cd:Array>
+            <cd:Description>Standard Deviation data points</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points)]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

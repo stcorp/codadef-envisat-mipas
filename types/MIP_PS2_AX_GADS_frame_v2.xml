@@ -1,0 +1,674 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_PS2_AX_GADS_frame_v2" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="spec_ev_switch">
+    <cd:Integer>
+      <cd:Description>Switch for processing of special events</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_path_diff">
+    <cd:Float>
+      <cd:Description>Maximum optical path difference</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_char">
+    <cd:Integer>
+      <cd:Description>Reference character to be compared with PCD</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spike_thresh">
+    <cd:Integer>
+      <cd:Description>Threshold of spike location wrt ZPD</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spike_thresh_rms">
+    <cd:Float>
+      <cd:Description>Threshold for maximum rms amplitude of spikes</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="laser_wvn">
+    <cd:Float>
+      <cd:Description>Wavenumber of laser</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_fr_counts">
+    <cd:Integer>
+      <cd:Description>Number of fringe counts valid for nominal measurement at MPD</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_nesr_thresh">
+    <cd:Integer>
+      <cd:Description>Number of NESR thresholds</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wvn_nesr_thresh1">
+    <cd:Float>
+      <cd:Description>Wavenumber related to the first NESR threshold</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="wvn_nesr_thresh2">
+    <cd:Float>
+      <cd:Description>Wavenumber related to the last NESR threshold</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nesr_thresh">
+    <cd:Array>
+      <cd:Description>Vector containing NESR thresholds</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_nesr_thresh)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="max_mw">
+    <cd:Integer>
+      <cd:Description>Maximum number of microwindows used in retrieval</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="trop_alt_coeff_a">
+    <cd:Float>
+      <cd:Description>Coefficient A for Tropopause Altitude Correction</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="trop_alt_coeff_b">
+    <cd:Float>
+      <cd:Description>Coefficient B for Tropopause Altitude Correction</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="trop_alt_coeff_c">
+    <cd:Float>
+      <cd:Description>Coefficient C for Tropopause Altitude Correction</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>496</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spec_res_coarse">
+    <cd:Float>
+      <cd:Description>Spectral resolution of the general coarse wavenumber grid</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_dev">
+    <cd:Float>
+      <cd:Description>Maximum allowed deviation between input grid and general coarse wavenumber grid</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_sinc">
+    <cd:Integer>
+      <cd:Description>Number of sinc interpolation coefficients</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_off">
+    <cd:Integer>
+      <cd:Description>Number of offsets used for interpolation</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_coef">
+    <cd:Integer>
+      <cd:Description>Number of coefficients defining analytical Norton-Beer apodisation function</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="coef">
+    <cd:Array>
+      <cd:Description>Coefficients of analytical Norton-Beer apodisation function</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_coef)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_wvn">
+    <cd:Integer>
+      <cd:Description>Number of wavenumbers at which the ILS has been characterised</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wnm">
+    <cd:Array>
+      <cd:Description>Vector containing wavenumbers at which the ILS has been characterised</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_wvn)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lin_shear_var">
+    <cd:Array>
+      <cd:Description>Vector containing for each wavenumber the linear shear variation along Z vs. OPD</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_wvn)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>cm</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ir_misalign">
+    <cd:Array>
+      <cd:Description>Vector containing for each wavenumber the systematic IR misalignment along Y</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_wvn)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>rad</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_res_fine">
+    <cd:Float>
+      <cd:Description>Spectral resolution of the general fine wavenumber grid</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="req_spec_width">
+    <cd:Float>
+      <cd:Description>Requested spectral width of the AILS in each spectral band</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_res_ails">
+    <cd:Float>
+      <cd:Description>Required minimum resolution of computed AILS</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_res_opd">
+    <cd:Integer>
+      <cd:Description>Minimum resolution of sampling grid in OPD domain</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_fft">
+    <cd:Integer>
+      <cd:Description>Maximum number of FFT samples to be used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_div_mir">
+    <cd:Float>
+      <cd:Description>Minimum divergence for which the modulation MIR is computed</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="z_ir_misalign">
+    <cd:Float>
+      <cd:Description>Systematic IR misalignment along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="y_lin_shear">
+    <cd:Float>
+      <cd:Description>Retroreflector linear shear along Y vs. OPD</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="y_interfer_div">
+    <cd:Float>
+      <cd:Description>Interferometer divergence along Y</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="z_interfer_div">
+    <cd:Float>
+      <cd:Description>Interferometer divergence along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="laser_misalign_opd_y">
+    <cd:Float>
+      <cd:Description>Systematic OPD measuring laser misalignment along Y</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="laser_misalign_opd_z">
+    <cd:Float>
+      <cd:Description>Systematic OPD measuring laser misalignment along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lin_shear_var_y">
+    <cd:Float>
+      <cd:Description>Linear shear variation along Y</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lin_shear_z">
+    <cd:Float>
+      <cd:Description>Retroreflector linear shear along Z</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="blur_ang_width_y">
+    <cd:Float>
+      <cd:Description>Blur angular width along Y</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="blur_ang_width_z">
+    <cd:Float>
+      <cd:Description>Blur angular width along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="opt_speed_interfer">
+    <cd:Float>
+      <cd:Description>Optical speed of interferometer</cd:Description>
+      <cd:Unit>cm/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="init_perturb">
+    <cd:Float>
+      <cd:Description>Initial perturbation on sampling of first sample</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="time_const_init_perturb">
+    <cd:Float>
+      <cd:Description>Time constant of exponential attenuation of initial sampling perturbation</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rel_speed_fluc">
+    <cd:Float>
+      <cd:Description>Initial relative speed fluctuation at the beginning of scan</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="time_const_speed_fluc">
+    <cd:Float>
+      <cd:Description>Time constant of exponential attenuation of the initial speed fluctuation</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="gain_slope">
+    <cd:Float>
+      <cd:Description>Gain slope of electrical response of IR detector and preamplifier</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mismatch_delay">
+    <cd:Float>
+      <cd:Description>Mismatch delay between IR electronics response and ADC trigger</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rel_drift_rate">
+    <cd:Float>
+      <cd:Description>Relative drift rate of laser wavenumber</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="white_noise_bw">
+    <cd:Float>
+      <cd:Description>Bandwidth of laser white noise</cd:Description>
+      <cd:Unit>Hz</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="laser_noise_bw">
+    <cd:Float>
+      <cd:Description>Bandwidth of laser 1/f noise</cd:Description>
+      <cd:Unit>Hz</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_samples_y">
+    <cd:Integer>
+      <cd:Description>Number of discrete samples of integral approximation along Y</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_samples_z">
+    <cd:Integer>
+      <cd:Description>Number of discrete samples of integral approximation along Z</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="coeff_c">
+    <cd:Float>
+      <cd:Description>Coefficient C used for ILS/AILS interpolation</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="coeff_b">
+    <cd:Float>
+      <cd:Description>Coefficient B used for ILS/AILS interpolation</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="coeff_a">
+    <cd:Float>
+      <cd:Description>Coefficient A used for ILS/AILS interpolation</cd:Description>
+      <cd:Unit>cm2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="const_spec_corr">
+    <cd:Float>
+      <cd:Description>Constant spectral correction coefficient of AILS</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lin_spec_corr">
+    <cd:Float>
+      <cd:Description>Linear spectral correction coefficient of AILS</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="quad_spec_corr">
+    <cd:Float>
+      <cd:Description>Quadratic spectral correction coefficient of AILS</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="interp_flag">
+    <cd:Integer>
+      <cd:Description>Flag to control, if AILS interpolation coefficients shall be take from L1b(1) or PS2(0)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_samples_apo">
+    <cd:Integer>
+      <cd:Description>Number of samples of apodisation vector in spectral domain</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_element_apo">
+    <cd:Integer>
+      <cd:Description>Number of elements of apodisation vector in OPD domain</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>80</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="thresh_ils">
+    <cd:Float>
+      <cd:Description>Threshold for spectral grid error on which the ILS is computed</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lowest_apo">
+    <cd:Float>
+      <cd:Description>Lowest value of apodisation vector</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="thresh_ratio">
+    <cd:Float>
+      <cd:Description>Threshold of ratio for which inverse squared apodisation function is computed</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_7">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="thresh_min_eigen">
+    <cd:Float>
+      <cd:Description>Threshold defining minimum value of eigenvalue</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_spec_lines">
+    <cd:Integer>
+      <cd:Description>Maximum number of spectral lines per microwindow</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="seq_vmr_ret">
+    <cd:Array format="ascii">
+      <cd:Description>Sequence of processing of VMR retrievals</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>4</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="switch_p_t_retrieval">
+    <cd:Integer>
+      <cd:Description>Switch for skipping p,T retrieval</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_hitran_code">
+    <cd:Integer>
+      <cd:Description>Maximum HITRAN code to be considered</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_preloop_iter">
+    <cd:Integer>
+      <cd:Description>Maximum number of p,T - 1st VMR preloop iterations</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_8">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="up_alt_thresh">
+    <cd:Float>
+      <cd:Description>Upper altitude threshold for use of spectral lines</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="low_alt_thresh">
+    <cd:Float>
+      <cd:Description>Lower altitude threshold for use of spectral lines</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_alt_step">
+    <cd:Float>
+      <cd:Description>Maximum altitude step for hydrostatic equilibrium</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="switch_ll_cont_def_corr">
+    <cd:Integer>
+      <cd:Description>Switch for activation of correction of lowest level for continuum derivatives: 0=deactivate correction; 1=activate correction</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ecmwf_ref_alt">
+    <cd:Array>
+      <cd:Description>Vector containing three reference altitudes to be used for ECMWF based altitude correction</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="thresh_ecmwf_ref_alt">
+    <cd:Float>
+      <cd:Description>Threshold to use lowest three altitudes for ECMWF based altitude correction</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_9">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

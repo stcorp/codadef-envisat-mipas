@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_ADSR_res" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Star time of DSR. ZPD time of sweep closest to the mean time of the corresponding scan</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADS)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="res_pt">
+    <cd:Record>
+      <cd:Description>residual spectra in p,T</cd:Description>
+      <cd:Field name="num_points">
+        <cd:Array>
+          <cd:Description>Vector defining number of spectral grid points for each microwindow used in p, T retrievals</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$res_structure_index[index(:/../..)]]/tot_num_p_t_micro_all_alt)]]></cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spectral_mask">
+        <cd:Array>
+          <cd:Description>Spectral mask</cd:Description>
+          <cd:Dimension><![CDATA[(int(/dataset_structure_ads[$res_structure_index[index(:/../..)]]/tot_num_spect_grid_p_t) + 7) / 8]]></cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="num_ret">
+        <cd:Integer>
+          <cd:Description>Number of p,T retrievals for which mean values and standard deviations are computed</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="mean">
+        <cd:Array>
+          <cd:Description>Mean value of residual spectra for spectral grid points in p,T retrieval microwindows</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$res_structure_index[index(:/../..)]]/tot_num_spect_grid_p_t)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="std_dev">
+        <cd:Array>
+          <cd:Description>Standard deviation of residual spectra for spectral grid points in p,T retrieval microwindows</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$res_structure_index[index(:/../..)]]/tot_num_spect_grid_p_t)]]></cd:Dimension>
+          <cd:Float>
+            <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="res_vmr">
+    <cd:Array>
+      <cd:Description>Residual spectra in target species for VMR #1..6</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="num_points">
+          <cd:Array>
+            <cd:Description>Vector defining number of spectral grid points for each microwindow used in species VMR retrievals</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$res_structure_index[index(:/../../..)]]/tot_num_vmr_micro_all_alt[index(:/..)])]]></cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="spectral_masks">
+          <cd:Array>
+            <cd:Description>Spectral masks</cd:Description>
+            <cd:Dimension><![CDATA[(int(/dataset_structure_ads[$res_structure_index[index(:/../../..)]]/tot_num_spect_grid_vmr[index(:/..)]) + 7) / 8]]></cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="num_ret">
+          <cd:Integer>
+            <cd:Description>Number of species VMR retrievals for which mean values and standard deviations are computed</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="mean">
+          <cd:Array>
+            <cd:Description>Mean value of residual spectra for spectral grid points in species  VMR retrieval microwindows.</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$res_structure_index[index(:/../../..)]]/tot_num_spect_grid_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="std_dev">
+          <cd:Array>
+            <cd:Description>Standard deviation of residual spectra for spectral grid points in species VMR retrieval microwindows.</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$res_structure_index[index(:/../../..)]]/tot_num_spect_grid_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Float>
+              <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>392</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

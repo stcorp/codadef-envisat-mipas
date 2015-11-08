@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_ADSR_structure_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of DSR (ZPD time of sweep closest to mean time of first scan this ADSR refers to)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_sweeps">
+    <cd:Integer>
+      <cd:Description>Number of sweeps per scan</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_p_t_pts">
+    <cd:Integer>
+      <cd:Description>Number of retrieved pressure/temperature profile points</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_vmr_pts">
+    <cd:Array>
+      <cd:Description>Number of retrieved VMR profile points</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="flags_p_t_error_flag">
+    <cd:Array>
+      <cd:Description>Flags indicating existence of p,T error propagation data</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_con_params_p_t">
+    <cd:Integer>
+      <cd:Description>Number of fitted continuum parameters in p,T retrievals</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_con_params_vmr">
+    <cd:Array>
+      <cd:Description>Number of fitted continuum parameters in VMR retrievals</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_instr_offset_p_t">
+    <cd:Integer>
+      <cd:Description>Number of fitted instrument offset values in p,T retrievals</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_instr_offset_vmr">
+    <cd:Array>
+      <cd:Description>Number of fitted instrument offset values in VMR retrievals</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="max_num_micro_p_t">
+    <cd:Integer>
+      <cd:Description>Max number of microwindows per acquisition tangent height used for p, T retrieval</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_num_micro_vmr">
+    <cd:Array>
+      <cd:Description>Max number of microwindows per acquisition tangent height used for VMR retrieval</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tot_num_p_t_micro_all_alt">
+    <cd:Integer>
+      <cd:Description>Total number of p, T microwindows (all altitudes) processed in current scan</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tot_num_vmr_micro_all_alt">
+    <cd:Array>
+      <cd:Description>Total number of VMR retrieval microwindows (all altitudes) processed in current scan</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tot_num_spect_grid_p_t">
+    <cd:Integer>
+      <cd:Description>Total number of spectral grid points contained in selected p,T microwindows</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tot_num_spect_grid_vmr">
+    <cd:Array>
+      <cd:Description>Total number of spectral grid points contained in selected microwindows for VMR removals</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_grid_con_p_t">
+    <cd:Integer>
+      <cd:Description>Number of profile grid points to represent continuum profile data for p,T retrieval</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_grid_con_vmr">
+    <cd:Array>
+      <cd:Description>Number of profile grid points to represent continuum profile data for VMR retrievals</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_evo_steps_p_t">
+    <cd:Integer>
+      <cd:Description>Maximum number of evolution steps reported for p,T retrievals. Refers to corresponding PCD info ADSR.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_evo_steps_vmr">
+    <cd:Array>
+      <cd:Description>Maximum number of evolution steps reported for VMR retrievals. Refers to corresponding PCD info ADSR.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_pcd_info">
+    <cd:Integer>
+      <cd:Description>Maximum number of PCD information strings in corresponding PCD info ADSR.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ds_pointer">
+    <cd:Array>
+      <cd:Description>Offset and size of first corresponding record for the following data-sets: 'SCAN INFORMATION', 'PT RETRIEVAL MDS', 'H2O RETRIEVAL MDS', 'N2O RETRIEVAL MDS', 'HNO3 RETRIEVAL MDS', 'CH4 RETRIEVAL MDS', 'O3 RETRIEVAL MDS', 'NO2 RETRIEVAL MDS', 'CONTINUUM AND OFFSET MDS', PCS INFORMATION MDS', 'MICROWINDOW OCCUPATION ADS', 'RESIDUAL SPECTRA ADS', and 'PROCESSING PARAMETERS ADS'. Order of data sets depends on contents of ORDER_OF_SPECIES field in SPH</cd:Description>
+      <cd:Dimension>13</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="dsr_offset">
+          <cd:Integer>
+            <cd:Description>Offset of first DSR. Set to -1 if DSR is missing.</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="dsr_length">
+          <cd:Integer>
+            <cd:Description>Size of DSRs</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>440</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

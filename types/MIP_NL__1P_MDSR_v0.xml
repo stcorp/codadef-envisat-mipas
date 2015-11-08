@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__1P_MDSR_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ZPD crossing time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD). 0 = non-corrupted, 1 = one or more bands corrupted, -1 = blank MDSR</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="seq_id">
+    <cd:Integer>
+      <cd:Description>Sequential ID counter. The sweep ID counter is a sequential counter that starts at 0 for each output file. It identifies each sweep contained within an output file (level 1B product).</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sc_pos">
+    <cd:Array>
+      <cd:Description>S/C position vector in earth-fixed reference</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="los_ang">
+    <cd:Array>
+      <cd:Description>LOS pointing angles (azimuth and elevation)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="loc_1">
+    <cd:Array>
+      <cd:Description>Geodetic tangent point geolocation (limb and error)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="loc_2">
+    <cd:Record>
+      <cd:Description>Geodetic latitude and geographic longitude of the tangent point geolocation</cd:Description>
+      <cd:Field name="latitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="longitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="rad_earth">
+    <cd:Float>
+      <cd:Description>Radius of earth surface curvature in looking direction at nadir of LOS tangent point</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="range_rate">
+    <cd:Float>
+      <cd:Description>Earth fixed target to satellite range rate</cd:Description>
+      <cd:Unit>km/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="alt_rate">
+    <cd:Float>
+      <cd:Description>Geodetic altitude rate of the target</cd:Description>
+      <cd:Unit>km/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="igm_limit">
+    <cd:Array>
+      <cd:Description>Interferogram min/max at ADC for each detector. Order: min for detectors A1, A2,...,D2 followed by max for A1, A2, ...,D2</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sweep_id">
+    <cd:Integer>
+      <cd:Description>Sweep ID counter (as in source packet)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ins_mode">
+    <cd:Integer>
+      <cd:Description>Instrument mode/activity</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="com_sweep">
+    <cd:Integer>
+      <cd:Description>Last commanded number of sweeps</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rel_pos">
+    <cd:Integer>
+      <cd:Description>Relative position of current sweep in scan</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dop_strch">
+    <cd:Float>
+      <cd:Description>Doppler stretching factor calculated</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_spikes">
+    <cd:Array>
+      <cd:Description>Number of detected/corrected spikes. Result of spike detection/correction for the current sweep and for each of the 6 channels/bands (A1, A2, B1, B2, C, and D). Are stored the number of spikes detected/corrected, the location of the bad pixel and the amplitude of the spikes (for the 10 highest) and the number and average of the remaining spikes. It is assumed that all detected spikes are corrected.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spike_pos">
+    <cd:Array>
+      <cd:Description>Spike positions in the interferogram. Position of spike given in sampling number for each band.</cd:Description>
+      <cd:Dimension>60</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spike_amp">
+    <cd:Array>
+      <cd:Description>Spike amplitudes. Amplitude (complex) of spike is given in arbitrary or normalized units as given at the output of the instrument.</cd:Description>
+      <cd:Dimension>60</cd:Dimension>
+      <cd:Complex>
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Complex>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="remain_spike">
+    <cd:Array>
+      <cd:Description>Number of remaining detected/corrected spikes</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="avg_amp">
+    <cd:Array>
+      <cd:Description>Average amplitudes of remaining detected (absolute values)</cd:Description>
+      <cd:Dimension>12</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fringe_count">
+    <cd:Array>
+      <cd:Description>Commanded left and right fringe count</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="asp_pos">
+    <cd:Array>
+      <cd:Description>APS position at last scan gate start and stop (the variable name 'asp_pos' is not changed into 'aps_pos' to avoid useless compiling errors)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_errs">
+    <cd:Integer>
+      <cd:Description>Number of detected/corrected fringe counter errors (relative fringe count error wrt the gain; i.e., the number of fringe counts (to left (-) or right(+)) the IGM is shifted to match the gain)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sweep_dir">
+    <cd:Text format="ascii">
+      <cd:Description>Sweep Direction. F = forward, R = reverse</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="band_val">
+    <cd:Array>
+      <cd:Description>Band Validity PCD (one value per band)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="detect_non_lin_flux">
+    <cd:Array>
+      <cd:Description>Detector non-linearity flux validity. (4 values, for detectors A1,A2,AB and B), 0 = flux value is valid, 1 = flux greater than upper threshold or less than lower threshold</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="warn_flag_isp">
+    <cd:Integer>
+      <cd:Description>Warning flag in ISP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="error_flag_isp">
+    <cd:Integer>
+      <cd:Description>Error flag in ISP</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>144</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="band_a">
+    <cd:Array>
+    <cd:Description>Spectral data points band A</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/num_points_per_band[0])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_ab">
+    <cd:Array>
+    <cd:Description>Spectral data points band AB</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/num_points_per_band[1])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_b">
+    <cd:Array>
+    <cd:Description>Spectral data points band B</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/num_points_per_band[2])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_c">
+    <cd:Array>
+    <cd:Description>Spectral data points band C</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/num_points_per_band[3])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_d">
+    <cd:Array>
+    <cd:Description>Spectral data points band D</cd:Description>
+      <cd:Dimension><![CDATA[int(/sph/num_points_per_band[4])]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

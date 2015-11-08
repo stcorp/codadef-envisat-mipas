@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_ADSR_params" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of granule. ZPD time of sweep closest to mean time of corresponding scan</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADS)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="elev_scans">
+    <cd:Array>
+      <cd:Description>Vector of actual elevation scan angles</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$param_structure_index[index(:/..)]]/num_sweeps)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sg">
+    <cd:Text format="ascii">
+      <cd:Description>Retrieved profile switch. Switch indicating whether standard pressure grids (see below) are used to represent retrieved profile data. 'S' = standard output grid; 'T' = tangent pressure grid.</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="pt">
+    <cd:Array>
+      <cd:Description>Vector defining pressure levels at which temperature profile data are represented.</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$param_structure_index[index(:/..)]]/num_p_t_pts)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>hPa</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pv">
+    <cd:Array>
+      <cd:Description>Vector defining pressure levels at which target species profile data are represented.</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(/dataset_structure_ads[$param_structure_index[index(:/../..)]]/num_vmr_pts[index(:)])]]></cd:Dimension>
+        <cd:Float>
+          <cd:Unit>hPa</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pcont_pt">
+    <cd:Array>
+      <cd:Description>Vector defining pressure levels at which continuum data for p,T retrieval are represented.</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$param_structure_index[index(:/..)]]/num_grid_con_p_t)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>hPa</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pcont_vmr">
+    <cd:Array>
+      <cd:Description>Vectors defining pressure levels at which continuum data for species VMR retrievals are represented. Ordering of species according to SPH.</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(/dataset_structure_ads[$param_structure_index[index(:/../..)]]/num_grid_con_vmr[index(:)])]]></cd:Dimension>
+        <cd:Float>
+          <cd:Unit>hPa</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="max_macro_iter_pt">
+    <cd:Integer>
+      <cd:Description>Max. number of macro iterations of Newton / Marquardt algorithm for p,T retrieval</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_macro_iter_vmr">
+    <cd:Array>
+      <cd:Description>Max. number of macro iterations of Newton / Marquardt algorithm for VMR retrievals. Ordering of species according to SPH.</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="max_micro_iter_pt">
+    <cd:Integer>
+      <cd:Description>Max. number of micro iterations of Newton / Marquardt algorithm for p,T retrieval</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_micro_iter_vmr">
+    <cd:Array>
+      <cd:Description>Max. number of micro iterations of Newton / Marquardt algorithm for VMR retrievals</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>640</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>656</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

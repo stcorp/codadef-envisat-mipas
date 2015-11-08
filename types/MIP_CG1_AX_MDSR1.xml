@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CG1_AX_MDSR1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ZPD crossing time of the first sweep coadded in gain for the given direction</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD), summarize PCD information per band</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_max_adc">
+    <cd:Array>
+      <cd:Description>IGM average min/max at ADC for each detector (IGM min at ADC for detectors A1, A2, ..., D2 followed by IGM max at ADC for detectors A1, A2, ..., D2)</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prt_avg_temp">
+    <cd:Array>
+      <cd:Description>PRT average temperatures</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_bb_coadded">
+    <cd:Integer>
+      <cd:Description>Number of blackbody igms coadded</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_bb_corr">
+    <cd:Integer>
+      <cd:Description>Number of blackbody igms corrupted and not coadded</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_ds_coadded">
+    <cd:Integer>
+      <cd:Description>Number of deep space igms coadded</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_ds_corr">
+    <cd:Integer>
+      <cd:Description>Number of deep space igms corrupted and not coadded</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fringe_count_err">
+    <cd:Integer>
+      <cd:Description>Fringe count error after current gain measurement wrt previous gain</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="feo_elem_temp">
+    <cd:Array>
+      <cd:Description>FEO Element temperature</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sweep_dir">
+    <cd:Text format="ascii">
+      <cd:Description>Sweep direction, 'F' = forward and 'R' = reverse</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="band_valid">
+    <cd:Array>
+      <cd:Description>Band Validity PCD for latest gain measurement. (5 values for bands A, AB, B, C, and D) 0 = non-corrupted, 4 = invalid due to radiometric accuracy verification</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="det_nonlin_ds">
+    <cd:Array>
+      <cd:Description>Detector non-linearity flux validity. (4 values, for detectors A1, A2, AB and B), 0 = flux value is valid, 1 = flux greater than upper threshold or less than lower threshold for at least 1 DS</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="det_nonlin_bb">
+    <cd:Array>
+      <cd:Description>Detector non-linearity flux validity. (4 values, for detectors A1, A2, AB and B), 0 = flux value is valid, 1 = flux greater than upper threshold or less than lower threshold for at least 1 BB</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>88</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="band_info">
+    <cd:Array>
+      <cd:Description>band information for bands A, AB, B, C, D</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="deci_fac">
+          <cd:Integer>
+            <cd:Description>Decimation factor for current band</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_spikes">
+          <cd:Integer>
+            <cd:Description>Number of detected/corrected spikes</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="igm_id">
+          <cd:Array>
+            <cd:Description>Sweep ID of igms containing spikes (room for 10 values, unused entries set to zero)</cd:Description>
+            <cd:Dimension>10</cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="spike_pos">
+          <cd:Array>
+            <cd:Description>Spike positions in the interferogram (room for 10 values, unused entries set to zero)</cd:Description>
+            <cd:Dimension>10</cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="spike_amp">
+          <cd:Array>
+            <cd:Description>Spike amplitudes (room for 10 complex values, each i followed by q. Unused entries set to zero). Spikes occurred at positions described by the corresponding entry in previous fields.</cd:Description>
+            <cd:Dimension>10</cd:Dimension>
+            <cd:Complex>
+              <cd:Float>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Complex>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="remain_spikes">
+          <cd:Integer>
+            <cd:Description>Number of remaining detected/corrected spikes</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="average_remain_spikes">
+          <cd:Array>
+            <cd:Description>Average amplitudes of remaining detected/corrected spikes</cd:Description>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="num_band_points">
+          <cd:Integer>
+            <cd:Description>Number of points in band</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="wavenumber_first">
+          <cd:Float>
+            <cd:Description>Wavenumber of first point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="wavenumber_last">
+          <cd:Float>
+            <cd:Description>Wavenumber of last point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="complex_points">
+          <cd:Array>
+            <cd:Description>Complex data points</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_band_points)]]></cd:Dimension>
+            <cd:Complex>
+              <cd:Float>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>float</cd:NativeType>
+              </cd:Float>
+            </cd:Complex>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_IG2_AX_MDSR_cont_prof" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (always set to zero)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="prof_cont">
+    <cd:Array>
+      <cd:Description>Continuum profiles for retrieval microwindows</cd:Description>
+      <cd:Dimension><![CDATA[if($ds_to_dsd_index[index(../..) - 3] == 4, int(/initial_guess_general_data[0]/num_pt_mw), int(/initial_guess_general_data[0]/num_vmr_mw[$ds_to_dsd_index[index(:/../..) - 3] - 5]))]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(/initial_guess_general_data[0]/num_elem)]]></cd:Dimension>
+        <cd:Float>
+          <cd:Unit>cm2</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

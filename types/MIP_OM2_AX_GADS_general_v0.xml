@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_OM2_AX_GADS_general_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="num_lat_bands">
+    <cd:Integer>
+      <cd:Description>Number of latitude bands for which data is contained</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat_bands">
+    <cd:Array>
+      <cd:Description>Vector of latitude bands</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_lat_bands)]]></cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees_north</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_spectral_bands">
+    <cd:Integer>
+      <cd:Description>Number of spectral bands</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spect_bands_used_mw">
+    <cd:Array>
+      <cd:Description>Spectral bands in which used microwindows are located</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_spectral_bands)]]></cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_tropo_height">
+    <cd:Float>
+      <cd:Description>Reference tropopause height for contained altitude data</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_diff_nums_sweeps">
+    <cd:Integer>
+      <cd:Description>Number of different numbers of sweeps for which occupation matrices are contained</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_sweeps_occ_matrices">
+    <cd:Array>
+      <cd:Description>Numbers of sweeps for which occupation matrices are contained</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_diff_nums_sweeps)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dsr_offsets_p_t_retr">
+    <cd:Array>
+      <cd:Description>Offsets of DSRs within p, T priority ADS defining priority of p,T retrieval occupation matrices with N[sw](1) rows valid for latitude band</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_diff_nums_sweeps)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../num_lat_bands)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dsr_offsets_vmr_retr">
+    <cd:Array>
+      <cd:Description>Offsets of DSRs within VMR priority ADS defining priority of species VMR retrieval occupation matrices with N[sw] rows valid for latitude band</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(../../num_diff_nums_sweeps)]]></cd:Dimension>
+        <cd:Dimension><![CDATA[int(../../num_lat_bands)]]></cd:Dimension>
+        <cd:Integer>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

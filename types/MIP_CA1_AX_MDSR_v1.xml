@@ -1,0 +1,515 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CA1_AX_MDSR_v1" last-modified="2013-06-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation Time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted, -1 = corrupted, default values filled in.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="therm_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Thermistor time (UTC). Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="feo_coef">
+    <cd:Array>
+      <cd:Description>FEO. A fifth order polynomial relates each thermistor (or a set of) reading (ADC count) to the actual temperature (Kelvin) which leads to a set of 6 coefficients. The units of coefficients are K, K/(ADC count), K/(ADC count)^2, K/(ADC count)^3, K/(ADC count)^4, K/(ADC count)^5.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="inst_coef">
+    <cd:Array>
+      <cd:Description>Instrument. A fifth order polynomial relates each thermistor (or a set of) reading (ADC count) to the actual temperature (Kelvin) which leads to a set of 6 coefficients. The units of coefficients are K, K/(ADC count), K/(ADC count)^2, K/(ADC count)^3, K/(ADC count)^4, K/(ADC count)^5.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cbe_coef">
+    <cd:Array>
+      <cd:Description>CBE. A fifth order polynomial relates each thermistor (or a set of) reading (ADC count) to the actual temperature (Kelvin) which leads to a set of 6 coefficients. The units of coefficients are K, K/(ADC count), K/(ADC count)^2, K/(ADC count)^3, K/(ADC count)^4, K/(ADC count)^5.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dpu_1_coef">
+    <cd:Array>
+      <cd:Description>DPU/DTU range 1. A fifth order polynomial relates each thermistor (or a set of) reading (ADC count) to the actual temperature (Kelvin) which leads to a set of 6 coefficients. The units of coefficients are K, K/(ADC count), K/(ADC count)^2, K/(ADC count)^3, K/(ADC count)^4, K/(ADC count)^5.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dpu_2_coef">
+    <cd:Array>
+      <cd:Description>DPU/DTU range 2. A fifth order polynomial relates each thermistor (or a set of) reading (ADC count) to the actual temperature (Kelvin) which leads to a set of 6 coefficients. The units of coefficients are K, K/(ADC count), K/(ADC count)^2, K/(ADC count)^3, K/(ADC count)^4, K/(ADC count)^5.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_coef">
+    <cd:Array>
+      <cd:Description>SPE. A fifth order polynomial relates each thermistor (or a set of) reading (ADC count) to the actual temperature (Kelvin) which leads to a set of 6 coefficients. The units of coefficients are K, K/(ADC count), K/(ADC count)^2, K/(ADC count)^3, K/(ADC count)^4, K/(ADC count)^5.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="paw_coef">
+    <cd:Array>
+      <cd:Description>PAW. A fifth order polynomial relates each thermistor (or a set of) reading (ADC count) to the actual temperature (Kelvin) which leads to a set of 6 coefficients. The units of coefficients are K, K/ADC count, K/(ADC count)^2, K/(ADC count)^3, K/(ADC count)^4, K/(ADC count)^5.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="nonlin_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Non-linearity time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="detector_coef">
+    <cd:Array>
+      <cd:Description>Detector responsivity coefficients with ASCM approach (relates responsivity to a 'digitized' incident flux). A third order polynomial (4 values from zero order term to third order term) relates detectors (A1, A2, B1 and B2 respectively) responsivity to a 'digitized' incident flux which leads to a set of 4 coefficients. There is a different set of coefficients for the Forward and the Reverse direction for each detector A1, A2, B1 and B2.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="photon_flux_min">
+    <cd:Array>
+      <cd:Description>Photon flux min associated with the fit coefficients</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="photon_flux_max">
+    <cd:Array>
+      <cd:Description>Photon flux max associated with the fit coefficients</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>256</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="equal_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Equalization time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="output_port">
+    <cd:Integer>
+      <cd:Description>Output port to equalize channel A. 0 = no equalization, 1 = channel A1 and 2 = channel A2.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_coef">
+    <cd:Integer>
+      <cd:Description>Number of coefficients (N=32 TBD; actually 16?). The number of coefficients is expected to be between 2 and 32, may be set to zero if field #(16? 17?) is zero.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="coef">
+    <cd:Array>
+      <cd:Description>Complex coefficients</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_coef)]]></cd:Dimension>
+      <cd:Complex>
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
+      </cd:Complex>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="bb_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Blackbody time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="corr_factor">
+    <cd:Float>
+      <cd:Description>Correction factors (size TBD)</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="element_loc">
+    <cd:Array>
+      <cd:Description>Base area element locations</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prt_loc">
+    <cd:Array>
+      <cd:Description>Base area PRT locations</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="view_factor">
+    <cd:Array>
+      <cd:Description>View factors</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="emis_star_freq">
+    <cd:Float>
+      <cd:Description>Start wavenumber of grid on which surface emissivity data are represented</cd:Description>
+      <cd:Unit>1/cm1</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="emis_step">
+    <cd:Float>
+      <cd:Description>Wavenumber increment of grid on which surface emissivity data are represented</cd:Description>
+      <cd:Unit>1/cm1</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="emis_num">
+    <cd:Integer>
+      <cd:Description>Number of data points in grid for surface emissivity (G)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="surf_emiss">
+    <cd:Array>
+      <cd:Description>Surface emissivity vs wavenumber</cd:Description>
+      <cd:Dimension><![CDATA[int(../emis_num)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="start_freq_grid">
+    <cd:Float>
+      <cd:Description>Start wavenumber of grid on which effective emissivity data are represented</cd:Description>
+      <cd:Unit>1/cm1</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="freq_inc_grid">
+    <cd:Float>
+      <cd:Description>Wavenumber increment of grid on which effective emissivity data are represented</cd:Description>
+      <cd:Unit>1/cm1</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_data_pt_grid">
+    <cd:Integer>
+      <cd:Description>Number of data points in grid for effective emissivity (H)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="eff_emiss">
+    <cd:Array>
+      <cd:Description>Effective emissivity vs. wavenumber</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_data_pt_grid)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prt_res">
+    <cd:Array>
+      <cd:Description>PRT resistance values (high and; low)</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dig_prt_coef">
+    <cd:Array>
+      <cd:Description>Digital to PRT resistance. A second order polynomial relates digital reading (from the 5 CBB PRT) to resistance values which leads to a set of 3 coefficients. The units of the coefficients are Ohm, Ohm/ADC count, Ohm/(ADC count)^2.</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prt_temp_coef">
+    <cd:Array>
+      <cd:Description>PRT resistance to temperature. A second order polynomial relates PRT resistance values to actual temperature (Kelvin) which leads to a set of 3 coefficients. The units of coefficients are K, K/Ohm, K/Ohm^2.</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>240</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="dtu_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>DTU time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="detector_coef_vs_temp">
+    <cd:Array>
+      <cd:Description>Detector responsivity vs temperature. A third order polynomial relates detector (for all 8) responsivity to DTU temperature which leads to a set of 4 coefficients. The units of coefficients are no units, 1/K, 1/K^2, 1/K^3.</cd:Description>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="temp_scale_fact">
+    <cd:Float>
+      <cd:Description>Responsivity scaling factor</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>336</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spe_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>SPE time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="spe_gain">
+    <cd:Array>
+      <cd:Description>Gain vs temperature and frequency.</cd:Description>
+      <cd:Dimension>12</cd:Dimension>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_phase">
+    <cd:Array>
+      <cd:Description>Phase vs. temperature and frequency.</cd:Description>
+      <cd:Dimension>12</cd:Dimension>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_7">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="paw_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>PAW time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="alignment_matrix">
+    <cd:Array>
+      <cd:Description>Alignment matrix [3,3]</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_8">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="pitch_roll_yaw_bias">
+    <cd:Array>
+      <cd:Description>Pitch, roll and yaw biases</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pitch_roll_yaw_harmonics">
+    <cd:Array>
+      <cd:Description>Pitch, roll and yaw harmonics (sine, cosine, frequency)</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="derivative_type">
+    <cd:Integer>
+      <cd:Description>Derivative type</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_harmonics">
+    <cd:Integer>
+      <cd:Description>Number of harmonics</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_9">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>384</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="elev_angles">
+    <cd:Array>
+      <cd:Description>Elevation angles</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="elev_angles_corr">
+    <cd:Array>
+      <cd:Description>Elevation angles corrections</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_10">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>1184</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="azi_offset">
+    <cd:Float>
+      <cd:Description>Azimuth offset</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_11">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>336</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

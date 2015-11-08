@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CS2_AX_ADSR_mw" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADS)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mw_label">
+    <cd:Text format="ascii">
+      <cd:Description>Label of microwindow</cd:Description>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="nlut">
+    <cd:Integer>
+      <cd:Description>Number of LUTs included for this microwindow</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dsr_offset">
+    <cd:Array>
+      <cd:Description>Offset of DSR within the corresponding LUT Retrieval Microwindows MDS containing LUT for absorbers</cd:Description>
+      <cd:Dimension><![CDATA[int(/lookup_tables_general_data[0]/ngas)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

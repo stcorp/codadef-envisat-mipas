@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_ADSR_mw_v1" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of validity of DSR. ZPD time of sweep closest to mean time of the corresponding scan</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADS)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mw_pt">
+    <cd:Record>
+      <cd:Description>Labels, logical retrieval vectors of p,T</cd:Description>
+      <cd:Field name="om_lab_pt">
+        <cd:Text format="ascii">
+          <cd:Description>p,T OM label</cd:Description>
+          <cd:ByteSize>10</cd:ByteSize>
+          <cd:NativeType>string</cd:NativeType>
+        </cd:Text>
+      </cd:Field>
+      <cd:Field name="mw_lab_pt">
+        <cd:Array format="ascii">
+          <cd:Description>p,T retrieval MW labels</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../..)]]/num_mw_labels_p_t)]]></cd:Dimension>
+          <cd:Text>
+            <cd:ByteSize>8</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="mw_lab_pt_sweep">
+        <cd:Array format="ascii">
+          <cd:Description>Labels of p,T retrieval microwindows.</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../..)]]/max_num_micro_p_t)]]></cd:Dimension>
+          <cd:Text>
+            <cd:ByteSize>8</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="mw_lrv_pt">
+        <cd:Array>
+          <cd:Description>Logical retrieval vector for p,T retrieval</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="mw_vmr">
+    <cd:Array>
+      <cd:Description>Labels, logical retrieval vectors of species VMR</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="om_lab_vmr">
+          <cd:Text format="ascii">
+            <cd:Description>VMR OM label</cd:Description>
+            <cd:ByteSize>10</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="mw_lab_vmr">
+          <cd:Array format="ascii">
+            <cd:Description>VMR retrieval MW labels</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../../..)]]/num_mw_labels_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Text>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+            </cd:Text>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="mw_lab_vmr_sweep">
+          <cd:Array format="ascii">
+            <cd:Description>Labels of species VMR retrieval microwindows.</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../../..)]]/max_num_micro_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Text>
+              <cd:ByteSize>8</cd:ByteSize>
+              <cd:NativeType>string</cd:NativeType>
+            </cd:Text>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="mw_lrv_vmr">
+          <cd:Array>
+            <cd:Description>Logical retrieval vector for species VMR retrieval</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$mw_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>8</cd:BitSize>
+              <cd:NativeType>uint8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize><![CDATA[8 * if($species_count == 2, 113, 47)]]></cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

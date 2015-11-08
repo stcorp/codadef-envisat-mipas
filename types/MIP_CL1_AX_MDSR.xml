@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CL1_AX_MDSR" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted, -1 = corrupted, default values filled in</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="freq_err_x">
+    <cd:Float>
+      <cd:Description>Angular frequency of first order harmonic pointing error related to x-axis (pitch)</cd:Description>
+      <cd:Unit>degrees/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="freq_err_y">
+    <cd:Float>
+      <cd:Description>Angular frequency of first order harmonic pointing error related to y-axis (roll)</cd:Description>
+      <cd:Unit>degrees/s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="bias_x">
+    <cd:Float>
+      <cd:Description>Estimated bias of pointing related to x-axis (pitch)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="amp_err_x">
+    <cd:Float>
+      <cd:Description>Estimated amplitude of first order harmonic pointing error related to x-axis (pitch)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="phs_err_x">
+    <cd:Float>
+      <cd:Description>Estimated phase of first order harmonic pointing error related to x-axis (pitch)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="bias_y">
+    <cd:Float>
+      <cd:Description>Estimated bias of pointing related to y-axis (roll)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="amp_err_y">
+    <cd:Float>
+      <cd:Description>Estimated amplitude of first order harmonic pointing error related to y-axis (roll)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="phs_err_y">
+    <cd:Float>
+      <cd:Description>Estimated phase of first order harmonic pointing error related to y-axis (roll)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="var_bias_x">
+    <cd:Float>
+      <cd:Description>Variance of estimated bias of pointing related to x-axis (pitch)</cd:Description>
+      <cd:Unit>degrees2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="var_amp_x">
+    <cd:Float>
+      <cd:Description>Variance of estimated amplitude of first order harmonic pointing error related to x-axis (pitch)</cd:Description>
+      <cd:Unit>degrees2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="var_phs_x">
+    <cd:Float>
+      <cd:Description>Variance of estimated phase of first order harmonic pointing error related to x-axis (pitch)</cd:Description>
+      <cd:Unit>degrees2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="var_bias_y">
+    <cd:Float>
+      <cd:Description>Variance of estimated bias of pointing related to y-axis (roll)</cd:Description>
+      <cd:Unit>degrees2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="var_amp_y">
+    <cd:Float>
+      <cd:Description>Variance of estimated amplitude of first order harmonic pointing error related to y-axis (roll)</cd:Description>
+      <cd:Unit>degrees2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="var_phs_y">
+    <cd:Float>
+      <cd:Description>Variance of estimated phase of first order harmonic pointing error related to y-axis (roll)</cd:Description>
+      <cd:Unit>degrees2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_fit">
+    <cd:Float>
+      <cd:Description>Minimum function value for fit</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_orb">
+    <cd:Integer>
+      <cd:Description>Number of orbits averaged</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="search_interval">
+    <cd:Float>
+      <cd:Description>Search interval defined as a radius about expected position used for peak find algorithm</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>240</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

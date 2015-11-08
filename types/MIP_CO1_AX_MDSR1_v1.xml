@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CO1_AX_MDSR1_v1" last-modified="2013-06-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="zpd_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ZPD time of first deep space sweep used to generate average offset data over one orbit</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD). 0 = non-corrupted, -1 = corrupted, default values filled in</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sweep_dir">
+    <cd:Text format="ascii">
+      <cd:Description>Sweep direction, 'F' = forward and 'R' = reverse</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="avg_off_mean">
+    <cd:Array>
+      <cd:Description>Least square mean of uncalibrated power spectrum average offset for band A, AB, B, C and D</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="avg_off_stdev">
+    <cd:Array>
+      <cd:Description>Least square standard deviation of uncalibrated power spectrum average offset for band A, AB, B, C and D</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>80</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="band">
+    <cd:Array>
+      <cd:Description>band A, AB, B, C, D information</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="deci_fac_curr_band">
+          <cd:Integer>
+            <cd:Description>Decimation factor for current band</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_points">
+          <cd:Integer>
+            <cd:Description>Number of points in band</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="first_wavenum">
+          <cd:Float>
+            <cd:Description>Wavenumber of first point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="last_wavenum">
+          <cd:Float>
+            <cd:Description>Wavenumber of last point in band</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="data_point">
+          <cd:Array>
+            <cd:Description>Complex data points</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points)]]></cd:Dimension>
+            <cd:Complex>
+              <cd:Float>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>float</cd:NativeType>
+              </cd:Float>
+            </cd:Complex>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_ADSR_geolocation_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of DSR (ZPD time of sweep closest to scans mean time)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment Flag (set to 1 if all MDSRs corresponding to this ADSR are blank, set to zero otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="loc_first">
+    <cd:Record>
+      <cd:Description>Geolocation of first scene LOS tangent point. WGS84 reference, refraction corrected</cd:Description>
+      <cd:Field name="latitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="longitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="first_alt">
+    <cd:Float>
+      <cd:Description>Tangent altitude of first scene LOS tangent point</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="loc_last">
+    <cd:Record>
+      <cd:Description>Geolocation of last scene LOS tangent point. WGS84 reference, refraction corrected</cd:Description>
+      <cd:Field name="latitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="longitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="last_alt">
+    <cd:Float>
+      <cd:Description>Tangent altitude of last scene LOS tangent point</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="loc_mid">
+    <cd:Record>
+      <cd:Description>Geolocation of LOS tangent point closest to scans mean time (WGS84 reference, refraction corrected)</cd:Description>
+      <cd:Field name="latitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="longitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="local_solar_time">
+    <cd:Integer>
+      <cd:Description>True local solar time at target</cd:Description>
+      <cd:Unit>1e-6 hours</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>hours</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_target_azi">
+    <cd:Integer>
+      <cd:Description>Satellite to target azimuth</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="target_sun_azi">
+    <cd:Integer>
+      <cd:Description>Target to sun azimuth</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="target_sun_elev">
+    <cd:Integer>
+      <cd:Description>Target to sun elevation</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>248</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

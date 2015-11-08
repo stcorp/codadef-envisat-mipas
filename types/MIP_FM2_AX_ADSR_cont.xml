@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_FM2_AX_ADSR_cont" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADS)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="noffset">
+    <cd:Integer>
+      <cd:Description>Index of highest considered geometry for continuum fit</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ngeo_cont">
+    <cd:Integer>
+      <cd:Description>Number of geometries used for continuum fit</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cont_occ">
+    <cd:Array>
+      <cd:Description>Continuum occupation matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/mw_occupation_matrix_ads[index(:/..)]/nmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="occ_close">
+    <cd:Array>
+      <cd:Description>Occupation matrix of close to close microwindows</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/mw_occupation_matrix_ads[index(:/..)]/nmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="group_type">
+    <cd:Array>
+      <cd:Description>Types of grouping for continuum fit</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/mw_occupation_matrix_ads[index(:/..)]/nmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nmw_cont">
+    <cd:Array>
+      <cd:Description>Number of microwindows considered for continuum fit at geometries used for continuum fit</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tot_mw">
+    <cd:Array>
+      <cd:Description>total number of microwindows selected at geometries used for continuum fit</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rel_ind_info">
+    <cd:Array>
+      <cd:Description>Relative index of microwindows considered for continuum fit (one at each geometry used for continuum fit)</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(../../nmw_cont[index(:)])]]></cd:Dimension>
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prog_enum_info">
+    <cd:Array>
+      <cd:Description>Progressive enumeration of microwindows considered for continuum fit (one at each geometry used for continuum fit)</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(../../nmw_cont[index(:)])]]></cd:Dimension>
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="abs_ind_info">
+    <cd:Array>
+      <cd:Description>Absolute index of all microwindows selected (one at each geometry used for continuum fit)</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(../../tot_mw[index(:)])]]></cd:Dimension>
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_interp_info">
+    <cd:Array>
+      <cd:Description>Number of continuum values to be interpolated (one at each geometry used for continuum fit)</cd:Description>
+      <cd:Dimension><![CDATA[int(../ngeo_cont)]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(../../nmw_cont[index(:)]) - 1]]></cd:Dimension>
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nholedmw">
+    <cd:Integer>
+      <cd:Description>Total number of 'holed' microwindows</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tot_holes">
+    <cd:Integer>
+      <cd:Description>Total number of holes in occupation matrix</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_holes">
+    <cd:Array>
+      <cd:Description>Number of holes in each holed microwindow</cd:Description>
+      <cd:Dimension><![CDATA[int(../nholedmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ind_holes">
+    <cd:Array>
+      <cd:Description>Indices of holed microwindow</cd:Description>
+      <cd:Dimension><![CDATA[int(../nholedmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ind_geom_info">
+    <cd:Array>
+      <cd:Description>Indices of geometries containing holes (one for each holed microwindow)</cd:Description>
+      <cd:Dimension><![CDATA[int(../nholedmw)]]></cd:Dimension>
+      <cd:Array>
+        <cd:Dimension><![CDATA[int(../../ind_holes[index(:)])]]></cd:Dimension>
+        <cd:Integer>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

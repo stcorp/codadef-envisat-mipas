@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_PI2_AX_GADS_general" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="num_mpd_ranges">
+    <cd:Integer>
+      <cd:Description>Number of MPD ranges for which data is contained</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mpd_ranges">
+    <cd:Array>
+      <cd:Description>MPD ranges for which matrices are contained</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_mpd_ranges)]]></cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="offsets">
+    <cd:Array>
+      <cd:Description>Offset of DSR in MDS containing VCM for MPD range</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_mpd_ranges)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

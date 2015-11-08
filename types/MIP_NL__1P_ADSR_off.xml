@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__1P_ADSR_off" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time (MJD) of the elevation scan to which this data pertains.(ZPD crossing time of first sweep in scan for which offset cal. data are valid)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADSR)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="band_valid_pcd">
+    <cd:Array>
+      <cd:Description>Band Validity PCD for latest offset measurement (5 values for bands A, AB, B, C, and D). 0 = non-corrupted; 1 = corrupted  due to instrument errors; 2 = corrupted due to transmission errors. 4 = corrupted due to observational validation.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="acc_fce_corr">
+    <cd:Array>
+      <cd:Description>Accumulated FCE correction in gain calibration data, at end of offset measurement sequence. 5 values for bands A, AB, B, C, and D.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sweep_dir">
+    <cd:Text format="ascii">
+      <cd:Description>Sweep direction, 'F' = forward and 'R' = reverse</cd:Description>
+      <cd:ByteSize>1</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="det_non_linear_flux">
+    <cd:Array>
+      <cd:Description>Detector non-linearity flux validity. (4 values, for detectors A1, A2, AB and B), 0 = flux value is valid, 1 = flux greater than upper threshold or less than lower threshold for at least 1 offset</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>368</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="band">
+    <cd:Array>
+      <cd:Description>bands A, AB, B, C, and D</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="zpd_cross_time">
+          <cd:Time timeformat="binary_envisat_datetime">
+            <cd:Description>ZPD crossing time of first sweep in currently valid offset sequence for this band</cd:Description>
+          </cd:Time>
+        </cd:Field>
+        <cd:Field name="dec_factor">
+          <cd:Integer>
+            <cd:Description>Decimation factor</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_corr_spikes">
+          <cd:Integer>
+            <cd:Description>Number of corrected spikes</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="spike_sweep_id">
+          <cd:Array>
+            <cd:Description>Sweep IDs of IGM containing spike</cd:Description>
+            <cd:Dimension>10</cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="spike_sample">
+          <cd:Array>
+            <cd:Description>Sample position of spikes in IGM</cd:Description>
+            <cd:Dimension>10</cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="spike_amp">
+          <cd:Array>
+            <cd:Description>Amplitude of spikes</cd:Description>
+            <cd:Dimension>10</cd:Dimension>
+            <cd:Complex>
+              <cd:Float>
+                <cd:BitSize>64</cd:BitSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Complex>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="spike_rem">
+          <cd:Integer>
+            <cd:Description>Number of remaining detected spikes</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="avg_amp_spike_rem">
+          <cd:Array>
+            <cd:Description>Average amplitude of remaining detected spikes</cd:Description>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="num_points">
+          <cd:Integer>
+            <cd:Description>Number of data points. Before decimation, low resolution sweep produces approximately 30769 data points while high resolution sweep produces approximately 307 692 data points. The decimation factor depends on the band and varies from 11 to 38</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="off_data">
+          <cd:Array>
+            <cd:Description>Complex data points. IGM data points are complex data output from FIR filter at the SPE.</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points)]]></cd:Dimension>
+            <cd:Complex>
+              <cd:Float>
+                <cd:BitSize>32</cd:BitSize>
+                <cd:NativeType>float</cd:NativeType>
+              </cd:Float>
+            </cd:Complex>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

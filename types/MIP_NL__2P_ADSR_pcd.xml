@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_ADSR_pcd" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of granule  ZPD time of sweep closest mean time of corresponding scan</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADS)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pcd_pt">
+    <cd:Record>
+      <cd:Description>pcd info for p,T</cd:Description>
+      <cd:Field name="num_macro">
+        <cd:Integer>
+          <cd:Description>Number of macro iterations</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>int16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="num_micro">
+        <cd:Integer>
+          <cd:Description>Number of micro iterations</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="part_chi2">
+        <cd:Array>
+          <cd:Description>Partial Chi^2 for microwindows. Unused fields are set to -1</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/num_sweeps)]]></cd:Dimension>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/max_num_micro_p_t)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="evol_chi2">
+        <cd:Array>
+          <cd:Description>Evolution of Chi^2 during iteration procedure</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/num_evo_steps_p_t)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="evol_lambda">
+        <cd:Array>
+          <cd:Description>Evolution of lambda (Marquardt damping factor) during iteration procedure</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/num_evo_steps_p_t)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="ret_val">
+        <cd:Array>
+          <cd:Description>Values of retrieved parameters for each macro iteration</cd:Description>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/num_evo_steps_p_t)]]></cd:Dimension>
+          <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/num_con_params_p_t) + int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/num_instr_offset_p_t) + 2 * int(/dataset_structure_ads[$pcd_structure_index[index(:/../..)]]/num_p_t_pts)]]></cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="pcd_vmr">
+    <cd:Array>
+      <cd:Description>PCD info for species</cd:Description>
+      <cd:Dimension><![CDATA[$species_count]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="num_macro">
+          <cd:Integer>
+            <cd:Description>Number of macro iterations</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>int16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_micro">
+          <cd:Integer>
+            <cd:Description>Number of micro iterations</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="part_chi2">
+          <cd:Array>
+            <cd:Description>Partial Chi^2 for microwindows. Unused fields are set to -1</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/num_sweeps)]]></cd:Dimension>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/max_num_micro_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="evol_chi2">
+          <cd:Array>
+            <cd:Description>Evolution of Chi^2 during iteration procedure</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/num_evo_steps_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="evol_lambda">
+          <cd:Array>
+            <cd:Description>Evolution of lambda during iteration procedure</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/num_evo_steps_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="ret_val">
+          <cd:Array>
+            <cd:Description>Values of retrieved parameters for each macro iteration</cd:Description>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/num_evo_steps_vmr[index(:/..)])]]></cd:Dimension>
+            <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/num_con_params_vmr[index(:/..)]) + int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/num_instr_offset_vmr[index(:/..)]) + int(/dataset_structure_ads[$pcd_structure_index[index(:/../../..)]]/num_vmr_pts[index(:/..)])]]></cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>32</cd:BitSize>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_valid_info_strings">
+    <cd:Integer>
+      <cd:Description>Number of valid PCD information strings</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="info_strings">
+    <cd:Array format="ascii">
+      <cd:Description>PCD information strings</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pcd_structure_index[index(:/..)]]/num_pcd_info)]]></cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>80</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>376</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

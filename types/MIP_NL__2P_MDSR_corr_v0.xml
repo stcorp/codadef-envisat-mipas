@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__2P_MDSR_corr_v0" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of DSR ZPD time of sweep closest to scans mean time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (set to -1 if retrieval failed. Set to 0 otherwise.)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="conv_id">
+    <cd:Integer>
+      <cd:Description>ID of convergence condition terminating the iteration: 0=convergence reached; 1=maximum number of micro-iterations exceeded; 2=maximum number of macro-iterations exceeded; 3=maximum run-time exceeded; 4=retrieval failed</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_chi2">
+    <cd:Float>
+      <cd:Description>Last Chi^2 test value</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ig_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating source of used initial guess data: bitfield: 0x01=MIP_IG2_AX data file used; 0x02=ECMWF data file used; 0x04=optimum estimate used; 0x08=retrieved p,T data used; 0x10=MIP_FM2_AX data used; 0x20=Recursive loop for p,T retrieval and first VMR retrieval (usually H2O) entered (this bit is only reported for p,T retrieval)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tan_press">
+    <cd:Array>
+      <cd:Description>Tangent pressure of i'th LOS tangent altitude. Ordered from highest to lowest altitude</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>hPa</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tan_press_var_cov">
+    <cd:Array>
+      <cd:Description>Tangent pressure variance / covariance data. Elements of diagonal and off-diagonal elements of variance/covariance matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) * (int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) + 1) / 2]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>hPa2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="h_corr">
+    <cd:Array>
+      <cd:Description>Height increment correction (dz) for i'th LOS tangent altitude.</cd:Description>
+      <cd:Dimension><![CDATA[if(int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) != 0, int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) - 1, 0)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="h_corr_var_cov">
+    <cd:Array>
+      <cd:Description>Height correction variance / covariance data. Elements of diagonal and off-diagonal elements of variance/covariance matrix.</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) * (int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) - 1) / 2]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="temp">
+    <cd:Array>
+      <cd:Description>Temperature of i'th grid point.</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="temp_var_cov">
+    <cd:Array>
+      <cd:Description>Temperature profile variance / covariance data. Elements of diagonal and off-diagonal elements of variance/covariance matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) * (int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts) + 1) / 2]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>K2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pres_temp_var_cov">
+    <cd:Array>
+      <cd:Description>Tangent pressure / temperature profile covariance data. Elements ptan-T profile covariance matrix. The value will be set to -10e30 for sweeps where pressure is not fitted</cd:Description>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/dataset_structure_ads[$pt_structure_index[index(:/..)]]/num_p_t_pts)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>hPa.K</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>448</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

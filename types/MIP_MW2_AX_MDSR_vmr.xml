@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_MW2_AX_MDSR_vmr" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>DSR length</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="microwindow_id">
+    <cd:Text format="ascii">
+      <cd:Description>Microwindow identifier</cd:Description>
+      <cd:ByteSize>8</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="lowest_wavenumber">
+    <cd:Float>
+      <cd:Description>Lowest wavenumber</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="highest_wavenumber">
+    <cd:Float>
+      <cd:Description>Highest wavenumber</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="wavenumber_grid_spacing">
+    <cd:Float>
+      <cd:Description>Spacing of wavenumber grid</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_wavenumber_grid_points">
+    <cd:Integer>
+      <cd:Description>Number of wavenumber grid points</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lowest_lat_mw">
+    <cd:Float>
+      <cd:Description>Lowest latitude where microwindow is valid</cd:Description>
+      <cd:Unit>degrees_north</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="highest_lat_mw">
+    <cd:Float>
+      <cd:Description>Highest latitude where microwindow is valid</cd:Description>
+      <cd:Unit>degrees_north</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_altitudes">
+    <cd:Integer>
+      <cd:Description>Number of altitudes</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tangent_altitude">
+    <cd:Array>
+      <cd:Description>Tangent altitude</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_altitudes)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="linear_cont_alt">
+    <cd:Array>
+      <cd:Description>Lower and upper border of region of linear continuum for altitude</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_altitudes)]]></cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spacing_fine_grid">
+    <cd:Float>
+      <cd:Description>Spacing of fine grid</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_fine_grid_points">
+    <cd:Integer>
+      <cd:Description>Number of fine grid points for irregular grid</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wavenumber_first_fine_grid">
+    <cd:Float>
+      <cd:Description>Wavenumber of first fine grid point</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="bitvector_compressed_grid">
+    <cd:Array>
+      <cd:Description>Bitvector indicating fine grid points to be used for compressed grid</cd:Description>
+      <cd:Dimension><![CDATA[(int(../num_fine_grid_points) + 7) / 8]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_compressed_grid_points">
+    <cd:Integer>
+      <cd:Description>Number of compressed grid points</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interpolation_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating interpolation method</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_gases">
+    <cd:Integer>
+      <cd:Description>Number of gases</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hitran_codes_gases">
+    <cd:Array>
+      <cd:Description>HITRAN codes of gases</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_gases)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_spectral_masks">
+    <cd:Integer>
+      <cd:Description>Number of spectral masks</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lower_alt_border_mask">
+    <cd:Array>
+      <cd:Description>Lower altitude border for mask</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_spectral_masks)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="upper_alt_border_mask">
+    <cd:Array>
+      <cd:Description>Upper altitude border for mask</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_spectral_masks)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spectral_mask">
+    <cd:Array>
+      <cd:Description>Spectral mask</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_spectral_masks)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../num_wavenumber_grid_points)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_SP2_AX_MDSR_spec" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (always set to zero)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wvn">
+    <cd:Float>
+      <cd:Description>Wavenumber</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="intensity">
+    <cd:Float>
+      <cd:Description>Intensity</cd:Description>
+      <cd:Unit>cm2/molec.cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="air_broad_296">
+    <cd:Float>
+      <cd:Description>Air broadened half-width at 296K</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="air_broad_hw_temp_dep">
+    <cd:Float>
+      <cd:Description>Coefficient of temperature dependence of air broadened half-width</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="low_energy">
+    <cd:Float>
+      <cd:Description>Lower state energy</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="wing_flag">
+    <cd:Integer>
+      <cd:Description>Flag for line wing treatment; 0 = interpolation possible; 1 = full treatment (calculation at each grid point in the microwindow).</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="isotope_num">
+    <cd:Integer>
+      <cd:Description>Isotope number</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hitran_mol">
+    <cd:Integer>
+      <cd:Description>HITRAN molecular code</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="up_lim">
+    <cd:Float>
+      <cd:Description>Upper limit where line has to be considered</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="low_lim">
+    <cd:Float>
+      <cd:Description>Lower limit where line has to be considered</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+</cd:Record>

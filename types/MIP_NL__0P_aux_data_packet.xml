@@ -1,0 +1,1085 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__0P_aux_data_packet" last-modified="2012-04-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="mcmd_execution_field">
+    <cd:Integer>
+      <cd:Description>Macrocommand Execution Field</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mpd_relay_contact_ods_status">
+    <cd:Integer>
+      <cd:Description>MPD Relay Contact / ODS Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="direct_voltage_current_status">
+    <cd:Integer>
+      <cd:Description>Direct Voltage/Current Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="idu_status">
+    <cd:Integer>
+      <cd:Description>IDU Status. Least significant byte denotes forward/reverse sweeps; 0 = counterclockwise; 1 = clockwise sweep.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="idu_error_status">
+    <cd:Integer>
+      <cd:Description>IDU Error Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="heater_power_level_relay_status">
+    <cd:Integer>
+      <cd:Description>Heater Power Level and Relay Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="asu_cmd_status">
+    <cd:Integer>
+      <cd:Description>ASU Command Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="asu_direct_status">
+    <cd:Integer>
+      <cd:Description>ASU Direct Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="esu_cmd_status">
+    <cd:Integer>
+      <cd:Description>ESU Command Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="esu_direct_status">
+    <cd:Integer>
+      <cd:Description>ESU Direct Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spe_config_status">
+    <cd:Integer>
+      <cd:Description>SPE Configuration Status</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fca_status">
+    <cd:Array>
+      <cd:Description>FCA Status</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sw_cmcd_status">
+    <cd:Integer>
+      <cd:Description>SW Command Status</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dpu_detector_thermistor_1">
+    <cd:Integer>
+      <cd:Description>Thermistor #1 temperature at the detectors (12 bits, range 0--337K)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dpu_detector_thermistor_2">
+    <cd:Integer>
+      <cd:Description>Thermistor #2 temperature at the detectors (12 bits, range 41--91K)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="latest_scan_gate_start_time">
+    <cd:Integer>
+      <cd:Description>Latest Scan Gate Start Time</cd:Description>
+      <cd:Unit>1/256 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="previous_scan_gate_start_time">
+    <cd:Integer>
+      <cd:Description>Previous Scan Gate Start Time</cd:Description>
+      <cd:Unit>1/256 s</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="end_identifier_1">
+    <cd:Integer>
+      <cd:Description>Constant value (FFFF, hex).</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="substeps_heater_mode">
+    <cd:Integer>
+      <cd:Description>Substeps to Heater Mode</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aps_pos_last_scan_gate_start">
+    <cd:Integer>
+      <cd:Description>APS Position at Last Scan Gate Start</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aps_pos_last_scan_gate_stop">
+    <cd:Integer>
+      <cd:Description>APS Position at Last Scan Gate Stop</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="measured_az_los">
+    <cd:Integer>
+      <cd:Description>Measured Azimuth LOS</cd:Description>
+      <cd:Unit>1e-5 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="measured_el_los">
+    <cd:Integer>
+      <cd:Description>Measured Elevation LOS</cd:Description>
+      <cd:Unit>1e-5 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="low_level_currents">
+    <cd:Array>
+      <cd:Description>Low Level Currents</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ice_box_a_temp_radiator">
+    <cd:Integer>
+      <cd:Description>ICE box A temp (radiator)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_box_b_temp_radiator">
+    <cd:Integer>
+      <cd:Description>ICE box B temp (radiator)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="icu_power_supply_temp">
+    <cd:Integer>
+      <cd:Description>ICU power supply temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fde_power_supply_temp_1">
+    <cd:Integer>
+      <cd:Description>FDE power supply temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fde_power_supply_temp_2">
+    <cd:Integer>
+      <cd:Description>FDE power supply temp 2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spe_box_temp">
+    <cd:Integer>
+      <cd:Description>SPE box temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spe_power_supply_temp_1">
+    <cd:Integer>
+      <cd:Description>SPE power supply temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spe_power_supply_temp_2">
+    <cd:Integer>
+      <cd:Description>SPE power supply temp 2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="paw_box_temp">
+    <cd:Integer>
+      <cd:Description>PAW box temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mio_base_plate_temp_1">
+    <cd:Integer>
+      <cd:Description>MIO base plate temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mio_base_plate_temp_2">
+    <cd:Integer>
+      <cd:Description>MIO base plate temp 2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mio_base_plate_temp_3">
+    <cd:Integer>
+      <cd:Description>MIO base plate temp 3</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aft_baffle_temp_1">
+    <cd:Integer>
+      <cd:Description>aft baffle temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aft_baffle_temp_2">
+    <cd:Integer>
+      <cd:Description>aft baffle temp 2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="side_baffle_temp">
+    <cd:Integer>
+      <cd:Description>side baffle temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fps_housing_temp_1">
+    <cd:Integer>
+      <cd:Description>FPS housing temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fps_housing_temp_2">
+    <cd:Integer>
+      <cd:Description>FPS housing temp 2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="asu_housing_temp_1">
+    <cd:Integer>
+      <cd:Description>ASU housing temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ope_temp">
+    <cd:Integer>
+      <cd:Description>OPE temperature</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="esu_temp_1">
+    <cd:Integer>
+      <cd:Description>ESU temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="not_used_temp_1">
+    <cd:Integer>
+      <cd:Description>Not used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="not_used_temp_2">
+    <cd:Integer>
+      <cd:Description>Not used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="telescope_temp">
+    <cd:Integer>
+      <cd:Description>Telescope temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_box_a_temp_doubler">
+    <cd:Integer>
+      <cd:Description>ICE box A temp (doubler)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="idu_temp_1">
+    <cd:Integer>
+      <cd:Description>IDU temp 1 (center wall rear)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="idu_temp_2">
+    <cd:Integer>
+      <cd:Description>IDU temp 2 (cent. wall near beam splitter)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="idu_temp_3">
+    <cd:Integer>
+      <cd:Description>IDU temp 3 (center wall top)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interferometer_souding_temp_1">
+    <cd:Integer>
+      <cd:Description>INT housing temp 1 (foot near FPS)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interferometer_souding_temp_2">
+    <cd:Integer>
+      <cd:Description>INT housing temp 2 (paraffin actuator)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="interferometer_souding_temp_3">
+    <cd:Integer>
+      <cd:Description>INT housing temp 3 (foot rear)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fce_temp">
+    <cd:Integer>
+      <cd:Description>FCE temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="not_used_temp_3">
+    <cd:Integer>
+      <cd:Description>Not used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="not_used_temp_4">
+    <cd:Integer>
+      <cd:Description>Not used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="not_used_temp_5">
+    <cd:Integer>
+      <cd:Description>Not used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="not_used_temp_6">
+    <cd:Integer>
+      <cd:Description>Not used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="fcu_temp">
+    <cd:Integer>
+      <cd:Description>FCU temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fca_radiator_temp">
+    <cd:Integer>
+      <cd:Description>FCA_radiator_temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="olb_box_a_temp">
+    <cd:Integer>
+      <cd:Description>OLB box A temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="old_box_b_temp">
+    <cd:Integer>
+      <cd:Description>OLB box B temp (not active laser box must be monitored for maintaining a minimum temperature)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mio_if_bracket_temp_1">
+    <cd:Integer>
+      <cd:Description>MIO I/F bracket temp 1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mio_if_bracket_temp_2">
+    <cd:Integer>
+      <cd:Description>MIO I/F bracket temp 2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mio_if_bracket_temp_3">
+    <cd:Integer>
+      <cd:Description>MIO I/F bracket temp 3</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mio_radiator_temp">
+    <cd:Integer>
+      <cd:Description>MIO radiator temperature</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mpd_temp">
+    <cd:Integer>
+      <cd:Description>MPD temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_box_b_temp_doubler">
+    <cd:Integer>
+      <cd:Description>ICE box B temp (doubler)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dbu_temp">
+    <cd:Integer>
+      <cd:Description>DBU temp</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="voltage_channels">
+    <cd:Array>
+      <cd:Description>The current baseline assumes none of these values are used, hence no detailed formats are provided here.</cd:Description>
+      <cd:Dimension>28</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cbb_hk_parameters">
+    <cd:Array>
+      <cd:Description>Temperature and Voltage information from the CBB.</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cbb_prt_readout_1">
+    <cd:Integer>
+      <cd:Description>Temperature readout from CBB base #1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cbb_prt_readout_2">
+    <cd:Integer>
+      <cd:Description>Temperature readout from CBB base #2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="end_identifier_2">
+    <cd:Integer>
+      <cd:Description>Constant value (FFFF, hex).</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spe_mode">
+    <cd:Integer>
+      <cd:Description>SPE Mode (transmission rate)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spe_clck">
+    <cd:Integer>
+      <cd:Description>SPE Clock Cycles per IGM</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_comm_sait_id">
+    <cd:Integer>
+      <cd:Description>Last commanded SAIT ID (high byte: elevation; low byte: azimuth)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_comm_no_sweeps">
+    <cd:Integer>
+      <cd:Description>Last commanded number of sweeps</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comm_low_fringe_count">
+    <cd:Integer>
+      <cd:Description>Commanded Low Fringe Count</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comm_high_fringe_count">
+    <cd:Integer>
+      <cd:Description>Commanded High Fringe Count</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comm_speed_rev_offs_cw">
+    <cd:Integer>
+      <cd:Description>Commanded Speed Reversal Offset (sr to cw)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comm_speed_rev_offs_ccw">
+    <cd:Integer>
+      <cd:Description>Commanded Speed Reversal Offset (sr to ccw)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comm_static_pos_slide_1">
+    <cd:Integer>
+      <cd:Description>Commanded Static Position Slide #1</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comm_static_pos_slide_2">
+    <cd:Integer>
+      <cd:Description>Commanded Static Position Slide #2</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comm_cross_over_pos">
+    <cd:Integer>
+      <cd:Description>Commanded cross-over position</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_comm_el_start_angle">
+    <cd:Integer>
+      <cd:Description>Last commanded elevation start angle</cd:Description>
+      <cd:Unit>1e-5 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_comm_az_start_angle">
+    <cd:Integer>
+      <cd:Description>Last commanded azimuth start angle</cd:Description>
+      <cd:Unit>1e-5 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="obt_start_last_scan_seq">
+    <cd:Integer>
+      <cd:Description>OBT at start of last scan sequence</cd:Description>
+      <cd:Unit>1/256 s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cbb_prt_readout_3">
+    <cd:Integer>
+      <cd:Description>Temperature readout from CBB base #3</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cbb_prt_readout_4">
+    <cd:Integer>
+      <cd:Description>Temperature readout from CBB base #4</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cbb_prt_readout_5">
+    <cd:Integer>
+      <cd:Description>Temperature readout from CBB base #5</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cbb_cal_param_high_res">
+    <cd:Array>
+      <cd:Description>CBB Calibration parameters (high resistance)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cbb_cal_param_low_res">
+    <cd:Array>
+      <cd:Description>CBB Calibration parameters (low resistance)</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rem_thermistor_channels">
+    <cd:Array>
+      <cd:Description>Remaining thermistor channels</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rem_voltage_channels">
+    <cd:Array>
+      <cd:Description>Remaining Voltage channels</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rem_lowlevel_voltage_channels">
+    <cd:Array>
+      <cd:Description>Remaining low-level voltage channels</cd:Description>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_status">
+    <cd:Array>
+      <cd:Description>SPE Status</cd:Description>
+      <cd:Dimension>41</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="comm_redun_config">
+    <cd:Array>
+      <cd:Description>Commanded redundancy configuration</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="paw_comm_gain_bias_tables">
+    <cd:Array>
+      <cd:Description>PAW Commanded Gain and Bias Tables</cd:Description>
+      <cd:Dimension>17</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_chan_delays">
+    <cd:Array>
+      <cd:Description>SPE Channel Delays</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_band_mapping">
+    <cd:Array>
+      <cd:Description>SPE Band Mapping</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_band_filter_sets">
+    <cd:Array>
+      <cd:Description>SPE Band Filter Sets</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_decim_factors">
+    <cd:Array>
+      <cd:Description>SPE Decimation Factors</cd:Description>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_timeout">
+    <cd:Array>
+      <cd:Description>SPE Timeout</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="asu_self_test_res">
+    <cd:Array>
+      <cd:Description>ASU Self Test results</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="esu_self_test_res">
+    <cd:Array>
+      <cd:Description>ESU Self Test results</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fca_status_and_monitoring">
+    <cd:Array>
+      <cd:Description>FCA Status and Monitoring</cd:Description>
+      <cd:Dimension>57</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="prev_scan_gate_start_time">
+    <cd:Integer>
+      <cd:Description>Previous Scan Gate Start Time</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ice_instr_mode_act">
+    <cd:Integer>
+      <cd:Description>ICE Instrument Mode / Activity</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="not_used_1">
+    <cd:Integer>
+      <cd:Description>Not Used</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="idx_el_start_angle_corr">
+    <cd:Integer>
+      <cd:Description>Index for elevation start angle correction table</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="idx_az_start_angle_corr">
+    <cd:Integer>
+      <cd:Description>Index for azimuth start angle correction table</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="not_used_2">
+    <cd:Array>
+      <cd:Description>Not Used</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="asu_esu_pos_data">
+    <cd:Array>
+      <cd:Description>Measured ASU/ESU Position Data</cd:Description>
+      <cd:Dimension>257</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spe_operating_mode">
+    <cd:Integer>
+      <cd:Description>SPE operating mode</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="timeout_settings">
+    <cd:Array>
+      <cd:Description>Timeout settings</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="filter_set_ident">
+    <cd:Integer>
+      <cd:Description>Filter Set Identifiers</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="filter_template_identifiers">
+    <cd:Integer>
+      <cd:Description>Filter Template Identifiers</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="band_mapping_config">
+    <cd:Array>
+      <cd:Description>Band Mapping Configuration</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="channel_delay_settings">
+    <cd:Array>
+      <cd:Description>Channel Delay Settings</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_sampl_igm">
+    <cd:Integer>
+      <cd:Description>Number of samples in IGM</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="volt_monitor">
+    <cd:Array>
+      <cd:Description>Voltage Monitor</cd:Description>
+      <cd:Dimension>9</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="asp_temp_mon">
+    <cd:Array>
+      <cd:Description>ASP Temperature Monitor</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="chan_stat">
+    <cd:Array>
+      <cd:Description>Channel Statistics</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dsp_control_register_status">
+    <cd:Array>
+      <cd:Description>DSP Control Register Status</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dsp_status_register_status">
+    <cd:Array>
+      <cd:Description>DSP Status Register Status</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dec_factors">
+    <cd:Array>
+      <cd:Description>Decimation Factors</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="act_op_config_reg_stat">
+    <cd:Array>
+      <cd:Description>Active OP Config Register Status</cd:Description>
+      <cd:Dimension>17</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="self_test_conf">
+    <cd:Array>
+      <cd:Description>Self Test Configuration</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sbit_edac_stats">
+    <cd:Integer>
+      <cd:Description>Single-bit EDAC Statistics</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_sbit_edac_fault_addr">
+    <cd:Integer>
+      <cd:Description>Last single-bit EDAC fault address</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="asp_latchup_err_flags">
+    <cd:Integer>
+      <cd:Description>ASP latch-up error flags</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="warn_flags">
+    <cd:Integer>
+      <cd:Description>Warning Flags</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="err_flags">
+    <cd:Integer>
+      <cd:Description>Error Flags</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="not_used_3">
+    <cd:Array>
+      <cd:Description>Values nominally set to zero in format.</cd:Description>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

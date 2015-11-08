@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_FM2_AX_MDSR_unk" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (always set to zero)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="press_prof">
+    <cd:Array>
+      <cd:Description>Pressure profile</cd:Description>
+      <cd:Dimension><![CDATA[int(/mw_occupation_matrix_ads[index(:/../..)]/n_param_levels)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="temp_prof">
+    <cd:Array>
+      <cd:Description>Temperature profile</cd:Description>
+      <cd:Dimension><![CDATA[int(/mw_occupation_matrix_ads[index(:/../..)]/n_param_levels)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cont_val">
+    <cd:Array>
+      <cd:Description>Continuum values</cd:Description>
+      <cd:Dimension><![CDATA[int(/mw_occupation_matrix_ads[index(:/../..)]/n_fit_cont_val)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="offset_val">
+    <cd:Array>
+      <cd:Description>Offset values</cd:Description>
+      <cd:Dimension><![CDATA[int(/mw_occupation_matrix_ads[index(:/../..)]/n_fit_offset_val)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_FM2_AX_GADS_fc" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="ngeo">
+    <cd:Integer>
+      <cd:Description>Number of simulated LOS geometries</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fit_flag">
+    <cd:Integer>
+      <cd:Description>Flag indicating fitting of continuum and offsets at contained forward calculations</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_CS1_AX_MDSR_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted, -1 = empty</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ils_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ILS time. ZPD time of first scene sweep used for ILS retrieval.</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag_2_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted, -1 = corrupted, default values filled in</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="prod_ref_1">
+    <cd:Text format="ascii">
+      <cd:Description>Level 1B product filename containing the scene measurements used. With the reference to the level 1B product file and sweep ID, it is possible to identify unambiguously the scene measurement that has been used for the actual spectral calibration. The reference to all underlying files can also be identified, including the offset calibration file, the gain calibration file, the LOS calibration file, the instrument characterization data file, the processing parameter file and the validation file.</cd:Description>
+      <cd:ByteSize>62</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="num_ils">
+    <cd:Integer>
+      <cd:Description>Number of ILS retrieved</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ils_data">
+    <cd:Array>
+      <cd:Description>ILS parameters</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_ils)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="micro_id">
+          <cd:Text format="ascii">
+            <cd:Description>Microwindow ID</cd:Description>
+            <cd:ByteSize>8</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="wavenumber">
+          <cd:Float>
+            <cd:Description>Exact wavenumber of spectral line. The wavenumber at which the ILS or peak has been computed in a given microwindow is also given, corresponding to the reference line position used in auxiliary data.</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="num_coadded">
+          <cd:Integer>
+            <cd:Description>Number of coadded scene measurements</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="seq_id">
+          <cd:Array>
+            <cd:Description>Sequential ID of scene measurements coadded</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_coadded)]]></cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="param_1">
+          <cd:Float>
+            <cd:Description>ILS modeling parameter: retroreflector linear shear along Z, vs. OPD. The computed ILS itself is not stored, but instead are stored the two generating parameters that can be used to generate the corresponding ILS at a given wavenumber</cd:Description>
+            <cd:Unit>cm</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="param_2">
+          <cd:Float>
+            <cd:Description>ILS modeling parameter: systematic IR misalignment along Y. The computed ILS itself is not stored, but instead are stored the two generating parameters that can be used to generate the corresponding ILS at a given wavenumber</cd:Description>
+            <cd:Unit>rad</cd:Unit>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spectral_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Spectral time. ZPD time of first scene sweep used for spectral calibration.</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag_3_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted, -1 = empty</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="prod_ref_2">
+    <cd:Text format="ascii">
+      <cd:Description>Level 1B product filename containing the scene measurements used. With the reference to the level 1B product file and sweep ID, it is possible to identify unambiguously the scene measurement that has been used for the actual spectral calibration. The reference (...)</cd:Description>
+      <cd:ByteSize>62</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="corr_factor">
+    <cd:Float>
+      <cd:Description>Linear spectral correction factor. Linear correction factor(same for all the bands). Doppler effect is treated separately and removed from scene spectra before spectral calibration.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="std_dev_corr_fac">
+    <cd:Float>
+      <cd:Description>Standard deviation of correction factor</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>192</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_peaks">
+    <cd:Integer>
+      <cd:Description>Number of peak fitted</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="peak_data">
+    <cd:Array>
+      <cd:Description>peak information</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_peaks)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="mcro_id">
+          <cd:Text format="ascii">
+            <cd:Description>Microwindow ID</cd:Description>
+            <cd:ByteSize>8</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="wavenumber">
+          <cd:Float>
+            <cd:Description>Exact wavenumber of spectral line.</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="dect_freq_shift">
+          <cd:Float>
+            <cd:Description>Detected frequency shift</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="correl_coeff">
+          <cd:Float>
+            <cd:Description>Correlation Coefficient</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="num_coadded">
+          <cd:Integer>
+            <cd:Description>Number of coadded scene measurements</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="seq_id">
+          <cd:Array>
+            <cd:Description>Sequential ID of scene measurements coadded</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_coadded)]]></cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

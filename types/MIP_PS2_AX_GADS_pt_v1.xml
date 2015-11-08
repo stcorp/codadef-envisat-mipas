@@ -1,0 +1,824 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_PS2_AX_GADS_pt_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="min_val_non_sing">
+    <cd:Float>
+      <cd:Description>Minimum value used to check non-singularity of matrix</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="a_priori_switch">
+    <cd:Integer>
+      <cd:Description>Switch for usage of a priori pointing information</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>96</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_elements">
+    <cd:Integer>
+      <cd:Description>Maximum number of elements in profiles</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_unsuccess">
+    <cd:Integer>
+      <cd:Description>Number of allowed unsuccessful previous retrievals</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="enh_spec_range">
+    <cd:Float>
+      <cd:Description>Enhanced spectral range of microwindows used to decide whether a line inside the microwindow shall be considered as line or as nearby continuum</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_samples_fine">
+    <cd:Integer>
+      <cd:Description>Maximum number of spectral samples on fine grid</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="chi2_thresh">
+    <cd:Float>
+      <cd:Description>Threshold to check convergence of Chi^2</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="thresh_fitted_press">
+    <cd:Float>
+      <cd:Description>Threshold to check convergence of fitted pressure</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="thresh_fitted_temp">
+    <cd:Float>
+      <cd:Description>Threshold to check convergence of fitted temperature</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_macro_iter_gauss">
+    <cd:Integer>
+      <cd:Description>Maximum number of Gauss-Newton macro-iterations</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_num_marq">
+    <cd:Integer>
+      <cd:Description>Maximum number of Marquardt micro-iterations</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="low_thresh_press">
+    <cd:Float>
+      <cd:Description>Lower threshold of estimated pressure</cd:Description>
+      <cd:Unit>hPa</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="up_thresh_press">
+    <cd:Float>
+      <cd:Description>Upper threshold of estimated pressure</cd:Description>
+      <cd:Unit>hPa</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="low_thresh_temp">
+    <cd:Float>
+      <cd:Description>Lower threshold of estimated temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="up_thresh_temp">
+    <cd:Float>
+      <cd:Description>Upper threshold of estimated temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="low_thresh_cont">
+    <cd:Float>
+      <cd:Description>Lower threshold of estimated continuum parameter</cd:Description>
+      <cd:Unit>cm2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="up_thresh_cont">
+    <cd:Float>
+      <cd:Description>Upper threshold of estimated continuum parameter</cd:Description>
+      <cd:Unit>cm2</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="constr_alt_corr_switch">
+    <cd:Integer>
+      <cd:Description>Switch for activation of contraining of altitude correction</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="constr_max_rel_p_corr">
+    <cd:Float>
+      <cd:Description>Contraining of maximum relative pressure correction</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>112</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="diff_spec_res">
+    <cd:Float>
+      <cd:Description>Difference between spectral resolution of general fine wavenumber grid and spectral grid of cross section look-up tables</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pre_stored_switch">
+    <cd:Integer>
+      <cd:Description>Switch for using pre-stored spectra and Jacobian matrix</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cont_param">
+    <cd:Integer>
+      <cd:Description>Control parameter for fitting of continuum and instrumental offset</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="up_alt_cont">
+    <cd:Float>
+      <cd:Description>Upper altitude limit where continuum shall be fitted</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="zero_alt_cont">
+    <cd:Float>
+      <cd:Description>Altitude above which the continuum shall be set to zero</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_fitted">
+    <cd:Integer>
+      <cd:Description>Maximum number of fitted parameters</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_overlap">
+    <cd:Float>
+      <cd:Description>Overlap of spectral range between two adjacent microwindows</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="temp_inc">
+    <cd:Float>
+      <cd:Description>Temperature increment used to compute perturbed temperature profile</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="cent_wvn">
+    <cd:Float>
+      <cd:Description>Central wavenumber of the line used as reference</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="temp_coef_lorentz">
+    <cd:Float>
+      <cd:Description>Coefficient of temperature dependence of Lorentz half-width of the line used as reference</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="guess_alt">
+    <cd:Float>
+      <cd:Description>Guess of altitude increment above highest level</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="red_fact">
+    <cd:Float>
+      <cd:Description>Reduction factor applied to guess of altitude increment</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="up_lim_atm">
+    <cd:Float>
+      <cd:Description>Upper limit of atmosphere</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="half_width_ref">
+    <cd:Float>
+      <cd:Description>Half-width of the line used as reference</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_temp_var_low">
+    <cd:Float>
+      <cd:Description>Maximum allowed temperature variation between atmospheric levels for lower altitudes</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_temp_var_high">
+    <cd:Float>
+      <cd:Description>Maximum allowed temperature variation between atmospheric levels for higher altitudes</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="alt_thresh_change">
+    <cd:Float>
+      <cd:Description>Altitude threshold where temperature thresholds are changed</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_var_half_width">
+    <cd:Float>
+      <cd:Description>Maximum allowed variation of half-width of the line between adjacent atmospheric levels</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_max_atm">
+    <cd:Integer>
+      <cd:Description>Number of maximum levels for modeling of the atmosphere</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_diff_gas">
+    <cd:Integer>
+      <cd:Description>Maximum number of different gases</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_geom">
+    <cd:Integer>
+      <cd:Description>Maximum number of simulated geometries</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_param_pt">
+    <cd:Integer>
+      <cd:Description>Maximum number of parameters to be retrieved for p, T and continuum</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="coef_corr_grav">
+    <cd:Array>
+      <cd:Description>Coefficients for latitude dependent correction of gravity acceleration</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="eq_ref_temp">
+    <cd:Float>
+      <cd:Description>Equivalent reference temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="eq_ref_press">
+    <cd:Float>
+      <cd:Description>Reference equivalent pressure at equivalent reference temperature used for line computation</cd:Description>
+      <cd:Unit>hPa</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="approx_err_int">
+    <cd:Float>
+      <cd:Description>Approximation error of integrals (Curtis-Godson)</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="init_temp_pert">
+    <cd:Float>
+      <cd:Description>Initial temperature of perturbed equivalent temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_layers">
+    <cd:Integer>
+      <cd:Description>Maximum number of layers</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_samp_integrand">
+    <cd:Integer>
+      <cd:Description>Minimum number of samples at which the integrand of each integral shall be computed</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_base_profile_elems">
+    <cd:Integer>
+      <cd:Description>Maximum number of elements in base profiles</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_integrate_var">
+    <cd:Float>
+      <cd:Description>Minimum value of integration variable</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_add_iapt_num">
+    <cd:Integer>
+      <cd:Description>Number of additional IAPT numbers for each geometry above the lowest geometry</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="half_width_mult_lorentz">
+    <cd:Float>
+      <cd:Description>Multiplier for Lorentz and Doppler half width used for Lorentz lineshape computations on the local coarse wavenumber grid</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="half_width_mult_voigt">
+    <cd:Float>
+      <cd:Description>Multiplier for Doppler half width used for Voigt lineshape computations on the local fine wavenumber grid</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="interp_switch">
+    <cd:Integer>
+      <cd:Description>Switch for interpolation of absorption cross sections for geometries above the lowest geometry</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cross_switch">
+    <cd:Integer>
+      <cd:Description>Switch for usage of cross section lookup tables</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="co2_chi_switch">
+    <cd:Integer>
+      <cd:Description>Switch for computation of CO2 Chi factor</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mult_fact_voigt">
+    <cd:Float>
+      <cd:Description>Multiplication factor applied to approximate Voigt half width to determine the local fine grid</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mult_fact_coarse">
+    <cd:Integer>
+      <cd:Description>Multiplier for definition of local coarse wavenumber grid</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_7">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_samp_x">
+    <cd:Integer>
+      <cd:Description>Number of samples along x coordinate</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_samp_y">
+    <cd:Integer>
+      <cd:Description>Number of samples along y coordinate</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="great_base">
+    <cd:Float>
+      <cd:Description>Greater base of trapezium defining the vertical FOV</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="small_base">
+    <cd:Float>
+      <cd:Description>Smaller base of trapezium defining the vertical FOV</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_8">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="lambda_damp_fact">
+    <cd:Float>
+      <cd:Description>Lambda damping factor</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="scale_lambda_damp_fact">
+    <cd:Float>
+      <cd:Description>Scaling of lambda damping factor related to continuum parameters</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="scale_dec_lambda">
+    <cd:Float>
+      <cd:Description>Scaling factor used to decrease lambda at each macro iteration</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="scale_inc_lambda">
+    <cd:Float>
+      <cd:Description>Scaling factor used to increase lambda at each micro iteration</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_rel_press_error">
+    <cd:Float>
+      <cd:Description>Threshold for maximum relative error of retrieved pressure</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="temp_thresh_err">
+    <cd:Float>
+      <cd:Description>Temperature threshold used to check the maximum error of retrieved temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="prev_prof_switch">
+    <cd:Integer>
+      <cd:Description>Switch for usage of previous retrieved profiles</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="half_width_const">
+    <cd:Array>
+      <cd:Description>Constants for computation of half-width</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_9">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="samp_inter_x_voigt">
+    <cd:Float>
+      <cd:Description>Sampling interval of x coordinate of Voigt LUT</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="samp_inter_y_voigt">
+    <cd:Float>
+      <cd:Description>Sampling interval of y coordinate of Voigt LUT</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_half_width_exp">
+    <cd:Float>
+      <cd:Description>Reference half width exponent of lineshape to be computed</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_half_width">
+    <cd:Float>
+      <cd:Description>Reference half-width of lineshape to be computed</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sd_ig2_profile">
+    <cd:Float>
+      <cd:Description>Standard deviation of IG2 profile at reference pressure</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_pressure_sd_ig2_profile">
+    <cd:Float>
+      <cd:Description>Reference pressure for standard deviation of IG2 profile</cd:Description>
+      <cd:Unit>hPa</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="grad_sd_ig2_profile">
+    <cd:Float>
+      <cd:Description>Gradient of standard deviation of IG2 profile</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="corr_factor_first_diag_elem">
+    <cd:Float>
+      <cd:Description>Correlation factor for first diagonal elements of interpolated VCM for IG2</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sd_ecmwf_profile">
+    <cd:Float>
+      <cd:Description>Standard deviation of ECMWF profile at reference pressure</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_pressure_sd_ecmwf_profile">
+    <cd:Float>
+      <cd:Description>Reference pressure for standard deviation of ECMWF profile</cd:Description>
+      <cd:Unit>hPa</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="grad_sd_ecmwf_profile">
+    <cd:Float>
+      <cd:Description>Gradient of standard deviation of ECMWF profile</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="corr_factor_ecmwf">
+    <cd:Float>
+      <cd:Description>Correlation factor for first diagonal elements of interpolated VCM for ECMWF</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="time_const_aging_vcm">
+    <cd:Float>
+      <cd:Description>Time constant for aging VCM of retrieved profiles</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="height_tropopause">
+    <cd:Float>
+      <cd:Description>Height of tropopause at poles</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="incr_tropopause_height">
+    <cd:Float>
+      <cd:Description>Increment of tropopause height</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sim_geom_below_trop">
+    <cd:Float>
+      <cd:Description>Maximum distance of simulated geometries below tropopause</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sim_distance_above_trop">
+    <cd:Float>
+      <cd:Description>Maximum distance of simulated geometries above tropopause</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="enabling_profile_reg">
+    <cd:Integer>
+      <cd:Description>Switch for enabling profile regularisation</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="param_tuning_profile_reg">
+    <cd:Float>
+      <cd:Description>Parameter for tuning profile regularisation</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="diag_reg_matrix">
+    <cd:Array>
+      <cd:Description>Diagonal and first off-diagonal element of regularisation matrix referring to pressure</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="diag_reg_matrix_temp">
+    <cd:Array>
+      <cd:Description>Diagonal and first off-diagonal element of regularisation matrix referring to temperature</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="diag_reg_matrix_cont">
+    <cd:Array>
+      <cd:Description>Diagonal and first off-diagonal element of regularisation matrix referring to continuum</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="diag_reg_matrix_offset">
+    <cd:Array>
+      <cd:Description>Diagonal and first off-diagonal element of regularisation matrix referring to offset</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="switch_fov_tab_func">
+    <cd:Integer>
+      <cd:Description>Switch for usage of FOV tabulated function</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_sim_geom_fov">
+    <cd:Integer>
+      <cd:Description>Maximum number of simulated geometries for FOV</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="band_fov_tab">
+    <cd:Array>
+      <cd:Description>FOV tabulation for bands A, AB, B, C, D</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Record>
+        <cd:Field name="num_points_fov_tab_band">
+          <cd:Integer>
+            <cd:Description>Number of points for FOV tabulation for spectral band</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="heights_fov_func_band">
+          <cd:Array>
+            <cd:Description>Heights of FOV function for spectral band</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points_fov_tab_band)]]></cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+        <cd:Field name="grid_fov_func_band">
+          <cd:Array>
+            <cd:Description>Grid for FOV function for spectral band</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_points_fov_tab_band)]]></cd:Dimension>
+            <cd:Float>
+              <cd:BitSize>64</cd:BitSize>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_MW2_AX_ADSR_pt" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="height_trop_p_t">
+    <cd:Float>
+      <cd:Description>Height of tropopause for p,T retrieval microwindows</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="npt">
+    <cd:Integer>
+      <cd:Description>Number of p,T retrieval microwindows</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lab_p_t_mw">
+    <cd:Array format="ascii">
+      <cd:Description>Labels of p,T microwindows.</cd:Description>
+      <cd:Dimension><![CDATA[int(../npt)]]></cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>8</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="offset_dsr_mds_data">
+    <cd:Array>
+      <cd:Description>Offset of DSR within corresponding MDS containing data for p,T microwindow</cd:Description>
+      <cd:Dimension><![CDATA[int(../npt)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

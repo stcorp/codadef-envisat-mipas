@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_FM2_AX_ADSR_occupation" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADS)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="occ_label">
+    <cd:Text format="ascii">
+      <cd:Description>Label of occupation matrix used at this DSR's latitude</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="nmw">
+    <cd:Integer>
+      <cd:Description>Number of p,T retrieval microwindows used at this DSR's latitude</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mw_pt">
+    <cd:Array format="ascii">
+      <cd:Description>p,T retrieval microwindows used for forward calculations.</cd:Description>
+      <cd:Dimension><![CDATA[int(../nmw)]]></cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>8</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mw_occ">
+    <cd:Array>
+      <cd:Description>Microwindow occupation matrix</cd:Description>
+      <cd:Dimension><![CDATA[int(/forward_model_general_data[0]/ngeo)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../nmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nsp">
+    <cd:Array>
+      <cd:Description>Number of spectral data points in p,T for microwindows</cd:Description>
+      <cd:Dimension><![CDATA[int(../nmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="n_param_levels">
+    <cd:Integer>
+      <cd:Description>Number of parameter levels for at DSR's latitude</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_fit_cont_val">
+    <cd:Integer>
+      <cd:Description>Number of fitted continuum values at this DSR's latitude</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_fit_offset_val">
+    <cd:Integer>
+      <cd:Description>Number of fitted offset values at this DSR's latitude</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nsim">
+    <cd:Integer>
+      <cd:Description>Number of simulations at this DSR's latitude</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_grid">
+    <cd:Array>
+      <cd:Description>Altitude grid for simulations at this DSR's latitude</cd:Description>
+      <cd:Dimension><![CDATA[int(../nsim)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/forward_model_general_data[0]/ngeo)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ads2_off">
+    <cd:Integer>
+      <cd:Description>Offset of DSR within Data for Continuum and Offset Fit ADS containing data relevant for continuum and offset fit</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mds11_off">
+    <cd:Array>
+      <cd:Description>Offset of DSR within Values for Unknown Parameters MDS containing pressure and temperature profile for simulations at this DSR's latitude</cd:Description>
+      <cd:Dimension><![CDATA[int(../nsim)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mds10_off">
+    <cd:Array>
+      <cd:Description>Offset of DSR within Spectra MDS containing spectrum for microwindow #k at geometry #j for simulation #i</cd:Description>
+      <cd:Dimension><![CDATA[int(../nsim)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/forward_model_general_data[0]/ngeo)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../nmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mds12_off">
+    <cd:Array>
+      <cd:Description>Offset of DSR within Jacobian Matrices MDS containing rows of Jacobian matrix for microwindow #k at geometry #j for simulation #i</cd:Description>
+      <cd:Dimension><![CDATA[int(../nsim)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/forward_model_general_data[0]/ngeo)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../nmw)]]></cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_NL__1P_ADSR_info_v0" last-modified="2012-10-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:BitSize><![CDATA[int(./dsr_length) * 8]]></cd:BitSize>
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of last start elevation scan sequence (MJD). This time corresponds to the ZPD crossing time of the first sweep of the scan for which the data is valid or used.</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="dsr_length">
+    <cd:Integer>
+      <cd:Description>Length of this DSR in bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this ADSR)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="app_id">
+    <cd:Integer>
+      <cd:Description>Application process ID</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="filter_id">
+    <cd:Integer>
+      <cd:Description>Filter set ID</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dec_factor">
+    <cd:Array>
+      <cd:Description>Decimation factors. Order: detectors A1, A2, ..., D2</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="band_map">
+    <cd:Array>
+      <cd:Description>Band mapping configuration</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_sweeps">
+    <cd:Integer>
+      <cd:Description>Number of sweeps in current scan</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_fringe">
+    <cd:Integer>
+      <cd:Description>Number of fringe counts (samples at ADC)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sait_id">
+    <cd:Array>
+      <cd:Description>Commanded elevation and azimuth SAIT ID of current scan</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="azi_ang">
+    <cd:Array>
+      <cd:Description>Commanded start elevation and azimuth angles of current scan</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="scan_count">
+    <cd:Integer>
+      <cd:Description>Elevation scan counter (reset to zero after a new valid offset calibration)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_fce">
+    <cd:Integer>
+      <cd:Description>Accumulated FCE corrected in gain calibration data, at end of current scan (reset to zero at the start of each processing window).</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="true_local_solar_time">
+    <cd:Integer>
+      <cd:Description>True local solar time at target</cd:Description>
+      <cd:Unit>1e-6 hours</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>hours</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_target_azim">
+    <cd:Integer>
+      <cd:Description>Satellite to target azimuth</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="target_sun_azim">
+    <cd:Integer>
+      <cd:Description>Target to sun azimuth</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="target_sun_elev">
+    <cd:Integer>
+      <cd:Description>Target to sun elevation</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>560</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="time_start_elev_scan">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>MJD start time of the first elevation scan (ZPD) from which scene data were extracted for actual spectral calibration.</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="qua_ind_pcd_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD); 0 = non_corrupted, -1 = default values filled in</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lin_spec_corr_fac">
+    <cd:Float>
+      <cd:Description>Linear spectral correction factor (Ksc). Linear correction factor (same for all the bands). Doppler effect is treated separately and removed from the scene spectra before spectral calibration.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="std_dev_corr_fac">
+    <cd:Float>
+      <cd:Description>Standard deviation of correction factor</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>192</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_pk_fit">
+    <cd:Integer>
+      <cd:Description>Number of peak fitted</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="paw_gain_scal">
+    <cd:Array>
+      <cd:Description>PAW gain scaling constants</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>112</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="peak">
+    <cd:Array>
+      <cd:Description>Peaks</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_pk_fit)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="mc_win_id">
+          <cd:Text format="ascii">
+            <cd:Description>Microwindow ID</cd:Description>
+            <cd:ByteSize>8</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="wvnum_spec_ln">
+          <cd:Float>
+            <cd:Description>Exact wavenumber of spectral line</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="dect_freq_shift">
+          <cd:Float>
+            <cd:Description>Detected frequency shift</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="correla_coeff">
+          <cd:Float>
+            <cd:Description>Correlation coefficient</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="num_coadd_scene">
+          <cd:Integer>
+            <cd:Description>Number of coadded scene measurements</cd:Description>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="seq_id_scene_coadd">
+          <cd:Array>
+            <cd:Description>Sequential ID of scene measurements coadded</cd:Description>
+            <cd:Dimension><![CDATA[int(../num_coadd_scene)]]></cd:Dimension>
+            <cd:Integer>
+              <cd:BitSize>16</cd:BitSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nesr_data">
+    <cd:Array>
+      <cd:Description>NESR data</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_sweeps)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(/sph/num_nesr_pnts)]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

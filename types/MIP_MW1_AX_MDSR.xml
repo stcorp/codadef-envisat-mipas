@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_MW1_AX_MDSR" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of creation</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD) 0 = non-corrupted,-1 = corrupted, default values filled in</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_microwindows">
+    <cd:Integer>
+      <cd:Description>Total number in file</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="microwindow_info">
+    <cd:Array>
+      <cd:Description>Microwindow descriptions</cd:Description>
+      <cd:Dimension><![CDATA[int(../num_microwindows)]]></cd:Dimension>
+      <cd:Record>
+        <cd:Field name="micro_id">
+          <cd:Text format="ascii">
+            <cd:Description>ID: The spectral line is referenced by its 8 character id</cd:Description>
+            <cd:ByteSize>8</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="active_flag">
+          <cd:Text format="ascii">
+            <cd:Description>Active: Set to 'A' if the microwindow is active or set to 'N' if it is not active.</cd:Description>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="utility_flag">
+          <cd:Text format="ascii">
+            <cd:Description>Utility: Set to 'S' if the microwindow is used for spectral calibration or set to 'I' if it is used for ILS retrieval.</cd:Description>
+            <cd:ByteSize>1</cd:ByteSize>
+            <cd:NativeType>string</cd:NativeType>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="peak_pos">
+          <cd:Float>
+            <cd:Description>Peak position</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="left_limit">
+          <cd:Float>
+            <cd:Description>Microwindow left limit</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="right_limit">
+          <cd:Float>
+            <cd:Description>Microwindow right limit</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="altitude">
+          <cd:Float>
+            <cd:Description>Altitude</cd:Description>
+            <cd:Unit>km</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="peak_hght">
+          <cd:Float>
+            <cd:Description>Peak height</cd:Description>
+            <cd:Unit>W/(cm2.sr.1/cm)</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="peak_width">
+          <cd:Float>
+            <cd:Description>Peak width (HWHM)</cd:Description>
+            <cd:Unit>1/cm</cd:Unit>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+        <cd:Field name="math_model">
+          <cd:Integer>
+            <cd:Description>Mathematical model</cd:Description>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="num_coadd">
+          <cd:Integer>
+            <cd:Description>Number of necessary coadditions</cd:Description>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>uint32</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="valid_thresh">
+          <cd:Float>
+            <cd:Description>Validity threshold</cd:Description>
+            <cd:BitSize>64</cd:BitSize>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
