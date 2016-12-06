@@ -587,6 +587,8 @@
         <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>
         <cd:MatchData offset="95">PO-TN-BOM-GS-0010_5A   </cd:MatchData>
       </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_PS1_AX_v2" format="binary" version="2">
       <cd:DetectionRule>
         <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
         <cd:MatchData offset="9">MIP_PS1_AX</cd:MatchData>

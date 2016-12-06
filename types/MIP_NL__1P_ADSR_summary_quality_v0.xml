@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="MIP_NL__1P_ADSR_summary_quality" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="MIP_NL__1P_ADSR_summary_quality_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="dsr_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>ZPD time of the first sweep in the scan</cd:Description>

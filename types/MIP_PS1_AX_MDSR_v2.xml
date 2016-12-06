@@ -1,0 +1,735 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="MIP_PS1_AX_MDSR_v2" last-modified="2016-12-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of calibration data acquisition (ZPD time of first sweep used for gain calibration)</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality indicator (PCD). 0 = non-corrupted, -1 = corrupted, default values filled in.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="samp_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Sampling time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="nom_laser_freq">
+    <cd:Float>
+      <cd:Description>Nominal laser wavenumber. Nominal set of modeling ILS parameters.</cd:Description>
+      <cd:Unit>1/cm</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="axis_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Axis time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="num_points_per_band">
+    <cd:Array>
+      <cd:Description>Number of points per band. Band sequence is A, AB, B, C, D.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="first_wavenum">
+    <cd:Array>
+      <cd:Description>Wavenumber of first point in band. Band sequence is A, AB, B, C, D.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="last_wavenum">
+    <cd:Array>
+      <cd:Description>Wavenumber of last point in band. Band sequence is A, AB, B, C, D.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="fce_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>FCE time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_points">
+    <cd:Array>
+      <cd:Description>Number of points around ZPD band B and C</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="nesr_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>NESR time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="nesr_std_dev_thresh">
+    <cd:Float>
+      <cd:Description>Standard deviation threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nesr_thresh_rej">
+    <cd:Float>
+      <cd:Description>Threshold of rejection (given as ratio, e.g. 0.05 means 5%).</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nesr_reduc_factor">
+    <cd:Integer>
+      <cd:Description>Template reduction factor</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rad_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Radiometric time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="rad_std_dev_thresh">
+    <cd:Float>
+      <cd:Description>Standard deviation threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rad_rej_thresh">
+    <cd:Float>
+      <cd:Description>Threshold of rejection (given as ratio, e.g. 0.05 means 5%).</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="rad_reduc_factor">
+    <cd:Integer>
+      <cd:Description>Template reduction factor</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="quality_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Quality time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="qual_std_dev_thresh">
+    <cd:Float>
+      <cd:Description>Standard deviation threshold.</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="qual_rej_thresh">
+    <cd:Float>
+      <cd:Description>Threshold of rejection (given as ratio, e.g. 0.05 means 5%).</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="qual_reduc_factor">
+    <cd:Integer>
+      <cd:Description>Template reduction factor</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_7">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spike_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Spike time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="num_per_block">
+    <cd:Integer>
+      <cd:Description>Number of points per block</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spike_std_dev_thresh">
+    <cd:Float>
+      <cd:Description>Standard deviation threshold</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_8">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="sinc_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Sinc time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="sinc_num_rows">
+    <cd:Integer>
+      <cd:Description>Number of rows (N)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sinc_num_cols">
+    <cd:Integer>
+      <cd:Description>Number of columns (J)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sinc_coef">
+    <cd:Array>
+      <cd:Description>Interpolation coefficients</cd:Description>
+      <cd:Dimension><![CDATA[int(../sinc_num_cols)]]></cd:Dimension>
+      <cd:Dimension><![CDATA[int(../sinc_num_rows)]]></cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_9">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spec_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>Spectral time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="spec_asc_node_time">
+    <cd:Float>
+      <cd:Description>Time since ascending node crossing from which the search for the first valid scene data shall start</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spec_update_period">
+    <cd:Integer>
+      <cd:Description>Update period (expressed in nominal scans, i.e. ignore scans in special event mode)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_tan_ht_intv">
+    <cd:Array>
+      <cd:Description>Tangent height interval within which scene data shall be extracted</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_scene_coadd">
+    <cd:Integer>
+      <cd:Description>Number of scenes to be co-added</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_simplex_conv_tol">
+    <cd:Float>
+      <cd:Description>Simplex convergence tolerance</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spec_max_iter">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_valid_thresh">
+    <cd:Float>
+      <cd:Description>Validity threshold for standard deviation</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="cal_method">
+    <cd:Integer>
+      <cd:Description>Calibration Method (0 = peak find method, 1 = cross correlation method)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_10">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>232</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ils_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>ILS time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="ils_asc_node_time">
+    <cd:Float>
+      <cd:Description>Time since ascending node crossing from which the search for the valid scene data shall start</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ils_tan_ht_intv">
+    <cd:Array>
+      <cd:Description>Tangent height interval within which scene data shall be extracted</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ils_max_scene_coadd">
+    <cd:Integer>
+      <cd:Description>Maximum number of scenes to be co-added</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ils_max_subseq_scan">
+    <cd:Integer>
+      <cd:Description>Maximum number of subsequent scans from which scenes are to be extracted (expressed in nominal scans, i.e. ignore scans in special event mode)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ils_simplex_conv_tol">
+    <cd:Float>
+      <cd:Description>Simplex convergence tolerance</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ils_max_iter">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="init_guess_para">
+    <cd:Array>
+      <cd:Description>Initial guess parameters for height and offset (initial search value for ILS retrieval by simplex method)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>km</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="max_opd">
+    <cd:Float>
+      <cd:Description>Maximum optical path difference</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="shear_y">
+    <cd:Float>
+      <cd:Description>Shear at ZPD along Y</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="shear_z">
+    <cd:Float>
+      <cd:Description>Shear at ZPD along Z</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mis_y">
+    <cd:Float>
+      <cd:Description>Systematic IR misalignment along Y (initial search value for ILS retrieval by simplex method)</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mis_z">
+    <cd:Float>
+      <cd:Description>Systematic IR misalignment along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="interfer_div_y">
+    <cd:Float>
+      <cd:Description>Interferometer divergence (total angle) along Y</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="interfer_div_z">
+    <cd:Float>
+      <cd:Description>Interferometer divergence (total angle) along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="laser_mis_y">
+    <cd:Float>
+      <cd:Description>Systematic laser misalignment along Y</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="laser_mis_z">
+    <cd:Float>
+      <cd:Description>Systematic laser misalignment along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_subdiv_y">
+    <cd:Integer>
+      <cd:Description>Number of field of view subdivisions along Y</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_subdiv_z">
+    <cd:Integer>
+      <cd:Description>Number of field of view subdivisions along Z</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_11">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="blur_width_y">
+    <cd:Float>
+      <cd:Description>Blur angular width along Y</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="blur_width_z">
+    <cd:Float>
+      <cd:Description>Blur angular width along Z</cd:Description>
+      <cd:Unit>rad</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="nomi_opt_speed">
+    <cd:Float>
+      <cd:Description>Nominal optical speed</cd:Description>
+      <cd:Unit>cm/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="init_pert">
+    <cd:Float>
+      <cd:Description>Sampling perturbation first sample</cd:Description>
+      <cd:Unit>cm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="init_pert_time_const">
+    <cd:Float>
+      <cd:Description>Time constant for attenuation of sampling perturbation</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="init_rel_speed_fluc">
+    <cd:Float>
+      <cd:Description>Relative speed fluctuation on the first sample</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="init_rel_speed_fluc_time_const">
+    <cd:Float>
+      <cd:Description>Time constant for attenuation of speed fluctuation</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="gain_slope">
+    <cd:Float>
+      <cd:Description>Slope of relative gain vs. relative frequency</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mismatch_delay">
+    <cd:Float>
+      <cd:Description>Delay mismatch between IR electrical response and ADC trigger signal</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="relative_drift">
+    <cd:Float>
+      <cd:Description>Relative drift rate of laser wavenumber per second</cd:Description>
+      <cd:Unit>1/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="noise_bw">
+    <cd:Float>
+      <cd:Description>Laser bandwidth due to white frequency noise</cd:Description>
+      <cd:Unit>Hz</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lin_shear_y">
+    <cd:Float>
+      <cd:Description>Linear shear variation along Y</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lin_shear_z">
+    <cd:Float>
+      <cd:Description>Linear shear variation along Z</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_12">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>336</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="los_time">
+    <cd:Time format="ascii" timeformat="ascii_envisat_datetime">
+      <cd:Description>LOS time. Last modification time of file section</cd:Description>
+      <cd:Mapping string="                           " value="nan"/>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="min_azi_angle_side">
+    <cd:Float>
+      <cd:Description>Minimum azimuth angle in side observation geometry</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_azi_angle_side">
+    <cd:Float>
+      <cd:Description>Maximum azimuth angle in side observation geometry</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_13">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>448</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="min_azi_angle_rear">
+    <cd:Float>
+      <cd:Description>Minimum azimuth angle in rearward observation geometry</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_azi_angle_rear">
+    <cd:Float>
+      <cd:Description>Maximum azimuth angle in rearward observation geometry</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+      <cd:NativeType>double</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_14">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>400</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="alt_orb_def">
+    <cd:Array>
+      <cd:Description>Altitude and orbit control system defaults - pitch, roll, and yaw</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="alt_orb_mis_angle">
+    <cd:Array>
+      <cd:Description>Altitude and orbit control system mispointing angle - pitch, roll, and yaw</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="alt_orb_mis_rate">
+    <cd:Array>
+      <cd:Description>Altitude and orbit control system mispointing rate - pitch, roll, and yaw</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees/s</cd:Unit>
+        <cd:BitSize>64</cd:BitSize>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="targ_mode">
+    <cd:Integer>
+      <cd:Description>TARGET mode</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="targ_ray">
+    <cd:Integer>
+      <cd:Description>TARGET ray tracing mode switch</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="targ_ext">
+    <cd:Integer>
+      <cd:Description>TARGET extended results vector switch</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="res_att_flag">
+    <cd:Integer>
+      <cd:Description>Restituted attitude flag option</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_15">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>384</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
