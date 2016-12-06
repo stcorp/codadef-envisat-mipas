@@ -94,6 +94,13 @@
         <cd:MatchData offset="95">PO-RS-MDA-GS-2009_5/B  </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_NL__1P_v3" format="binary" version="3">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_NL__1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_7    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="MIP_NL__2P">
     <cd:Description>MIPAS Temperature, Pressure, and Atmospheric Constituents Profiles</cd:Description>
@@ -534,6 +541,13 @@
         <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
         <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
         <cd:MatchData offset="95">PO-TN-BOM-GS-0010_6    </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="MIP_CA1_AX_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">MIP_CA1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-TN-BOM-GS-0010_7    </cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>

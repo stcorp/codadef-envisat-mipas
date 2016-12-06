@@ -5,7 +5,7 @@
       <cd:NamedType id="MPH"/>
     </cd:Field>
     <cd:Field name="sph">
-      <cd:NamedType id="MIP_NL__1P_SPH"/>
+      <cd:NamedType id="MIP_NL__1P_SPH_v0"/>
     </cd:Field>
     <cd:Field name="dsd">
       <cd:Array format="ascii">
