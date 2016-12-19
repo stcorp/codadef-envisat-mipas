@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record format="binary" name="MIP_CA1_AX_MDSR_v2" last-modified="2016-12-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record format="binary" name="MIP_CA1_AX_MDSR_v2" last-modified="2016-12-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="dsr_time">
     <cd:Time timeformat="binary_envisat_datetime">
       <cd:Description>Creation Time</cd:Description>
@@ -508,7 +508,7 @@
   <cd:Field name="spare_11">
     <cd:Raw>
       <cd:Description>Spare</cd:Description>
-      <cd:BitSize>59856</cd:BitSize>
+      <cd:BitSize>720</cd:BitSize>
     </cd:Raw>
     <cd:Hidden/>
   </cd:Field>
